@@ -1,0 +1,192 @@
+{
+  "$schema": "https://jsonresume.org/schema@1.0.0",
+  "meta": {
+    "ats": {
+      "version": "1.0",
+      "optimizedFor": ["Greenhouse", "Workday", "Lever"]
+    }
+  },
+  "basics": {
+    "image": "",
+    "name": "Freddy Huaylla",
+    "label": "Fullstack Developer | JavaScript/TypeScript | AWS Certified",
+    "email": "fmarcosdev@gmail.com",
+    "phone": "+56 9 7464 6583",
+    "url": "https://fmarcos.dev",
+    "summary": "Desarrollador Fullstack Senior con más de 4 años de experiencia en arquitecturas escalables utilizando JavaScript/TypeScript (NestJS, Next.js). Experto en optimización de rendimiento (+70% en métricas Lighthouse), integración de IA generativa (OpenAI, LangChain) y DevOps (Docker, CI/CD). Certificado AWS y especialista en desarrollo ágil (Scrum/Kanban). Lideré equipos en proyectos SaaS para 50k+ usuarios y soluciones ERP con WebSockets.",
+    "location": {
+      "city": "Arica",
+      "countryCode": "CL",
+      "timezone": "UTC-3"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://linkedin.com/in/freddy-huaylla-dev"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/freddy-huaylla"
+      },
+      {
+        "network": "Portfolio",
+        "url": "https://fmarcos.dev"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Tech Solutions Inc.",
+      "position": "Senior Fullstack Developer",
+      "type": "full-time",
+      "url": "https://techsolutions.com",
+      "startDate": "2021-03",
+      "endDate": "2024-01",
+      "summary": "Lideré el desarrollo de soluciones escalables y la implementación de tecnologías avanzadas como microfrontends, WebSockets y pipelines CI/CD.",
+      "highlights": [
+        "Migración a microfrontends con Module Federation: reducción del 30% en tiempos de despliegue.",
+        "Arquitectura backend con NestJS y WebSockets: soporte para 10k conexiones concurrentes.",
+        "Pipeline CI/CD con GitHub Actions: cobertura de pruebas del 90%.",
+        "Integración de OpenAI para generación de reportes automatizados: reducción del 40% en tiempo manual."
+      ],
+      "technologies": ["NestJS", "Next.js", "AWS Lambda", "Docker", "Jest"],
+      "atsKeywords": [
+        "microservices",
+        "websockets",
+        "ai integration",
+        "tdd",
+        "ci/cd",
+        "typescript",
+        "javascript"
+      ]
+    },
+    {
+      "company": "Freelance (Proyecto AhorraMax)",
+      "position": "Fullstack Lead",
+      "type": "contract",
+      "startDate": "2020-06",
+      "endDate": "2021-02",
+      "summary": "Desarrollé un sistema de scraping multi-fuente y un frontend optimizado para SEO con Next.js ISR.",
+      "highlights": [
+        "Sistema de scraping multi-fuente con Python + Puppeteer: procesamiento de 50k productos/día.",
+        "Frontend con Next.js ISR: indexación de 100k páginas (+60% SEO).",
+        "Automatización de despliegues con AWS CodePipeline."
+      ],
+      "technologies": ["Next.js", "Python", "MongoDB", "AWS S3"],
+      "visible": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "ERP Multiplataforma",
+      "description": "Sistema de gestión empresarial para retail con 5 sucursales.",
+      "role": "Tech Lead",
+      "url": "https://github.com/freddy-huaylla/erp-retail",
+      "startDate": "2022-01",
+      "endDate": "2022-09",
+      "highlights": [
+        "Reducción de latencia de 500ms a 200ms con Socket.io.",
+        "Implementación de autenticación JWT con refresh tokens rotativos."
+      ],
+      "technologies": ["NestJS", "React", "PostgreSQL", "Redis"],
+      "metrics": {
+        "users": "500+",
+        "performance": "95/100 Lighthouse"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend Development",
+      "level": "Advanced",
+      "keywords": [
+        "Node.js",
+        "NestJS",
+        "Express",
+        "Microservices",
+        "WebSockets"
+      ]
+    },
+    {
+      "name": "Frontend Development",
+      "level": "Advanced",
+      "keywords": [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "SEO Optimization"
+      ]
+    },
+    {
+      "name": "DevOps & Cloud",
+      "level": "Intermediate",
+      "keywords": [
+        "AWS Lambda",
+        "Docker",
+        "CI/CD",
+        "Kubernetes",
+        "Serverless Architecture"
+      ]
+    },
+    {
+      "name": "Artificial Intelligence",
+      "level": "Intermediate",
+      "keywords": [
+        "OpenAI",
+        "LangChain",
+        "Machine Learning APIs",
+        "Natural Language Processing"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad de Chile",
+      "area": "Ingeniería Civil en Computación",
+      "studyType": "Bachelor",
+      "startDate": "2012-03",
+      "endDate": "2018-12",
+      "gpa": "5.8/7.0",
+      "courses": [
+        "Arquitectura de Software",
+        "Bases de Datos Distribuidas",
+        "Inteligencia Artificial"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo",
+      "atsCode": "es-CL"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Avanzado (C1)",
+      "certificate": "TOEFL 620"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services",
+      "date": "2023-05",
+      "url": "https://awscertifications.com/verify/123456"
+    },
+    {
+      "name": "Scrum Master Professional Certificate",
+      "issuer": "Scrum.org",
+      "date": "2022-11"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Optimización de WebSockets en entornos SaaS",
+      "publisher": "Medium",
+      "url": "https://medium.com/@fmarcosdev/websockets-saas",
+      "date": "2023-08"
+    }
+  ],
+  "volunteer": []
+}

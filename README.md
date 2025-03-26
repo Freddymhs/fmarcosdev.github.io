@@ -52,3 +52,8 @@ export default tseslint.config({
   },
 })
 ```
+
+
+# complements
+- https://github.com/Jac21/SkillSet?tab=readme-ov-file
+- https://registry.jsonresume.org
