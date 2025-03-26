@@ -1,14 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import pdfPath from "./generate-resume-files-by-workflow/cv.pdf";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const handleDownloadCV = () => {
+    // Construct the path to the PDF in the generate-resume-files-by-workflow directory
+    // const pdfPath = "/generate-resume-files-by-workflow/cv.pdf";
+
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = pdfPath;
+    link.download = "cv.pdf";
+
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <>
       <div>
+        <button
+          onClick={handleDownloadCV}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Download CV PDF
+        </button>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -29,7 +50,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

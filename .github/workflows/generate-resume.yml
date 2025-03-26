@@ -1,0 +1,95 @@
+name: 📄 Multi-Format Resume
+
+on:
+  push:
+    branches:
+      - development
+    paths-ignore:
+      - "generate-resume-files-by-workflow/**"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for manual workflow dispatch"
+        required: false
+        default: "Manual resume generation"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-resume-formats:
+    name: 🚀 Create Resume pdf doc html
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏁 Initialize Workflow
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+          fetch-depth: 0 # Fetch full history
+
+      - name: 🛠️ Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+
+      - name: 📦 Cache Node Modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: 📦 Install Dependencies
+        run: npm install
+
+      - name: 🛠️ Install System Packages
+        run: |
+          sudo apt update
+          sudo apt install -y wkhtmltopdf pandoc
+          npm install jsonresume-theme-dev-ats resume-cli
+
+      - name: 📋 Generate Multi Documents
+        run: |
+          npx resume export --theme dev-ats --format html cv.html
+          wkhtmltopdf cv.html cv.pdf
+          pandoc cv.html -o cv.docx
+          ls
+
+      - name: 📂 Move Generated Files
+        run: |
+          mkdir -p src/generate-resume-files-by-workflow
+          mv cv.html src/generate-resume-files-by-workflow/cv.html
+          mv cv.pdf src/generate-resume-files-by-workflow/cv.pdf
+          mv cv.docx src/generate-resume-files-by-workflow/cv.docx
+
+      - name: 🏗️ Build Project
+        run: npm run build
+
+      - name: 🔧 Configure Git User
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: 🚀 Commit and Push to Development
+        run: |
+          git pull origin development
+          git add .
+          git commit -m "🔄 Automated add new resumes and build"
+          git push origin development
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔄 Sync Main Branch
+        run: |
+          git fetch origin
+          git checkout main
+          git reset --hard origin/development
+          git push origin main --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ✅ Workflow Completion Notification
+        if: success()
+        run: echo "Resume generation, push to development and sync to main completed successfully! 🎉"
+
+        #

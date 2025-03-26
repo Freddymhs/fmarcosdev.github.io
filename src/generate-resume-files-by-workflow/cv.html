@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+    <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+    <title>Freddy Huaylla</title>
+
+    <style>
+    /* Template level */
+body {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    margin: 24px 48px;
+}
+
+h1 {
+    font-size: 26px;
+    text-align: center;
+    margin: 5px;
+}
+
+h2 {
+    border-width: 1px;
+    border-style: none none solid none;
+    margin: 10px 0 2.5px 0;
+}
+
+section {
+    margin: 3px 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.item {
+    margin-top: 8px;
+}
+
+.item>.item-header {
+    float: left;
+    display: block;
+}
+
+.item>.item-header>.item-header-title {
+    font-weight: bold;
+}
+
+.item>.item-header>.item-header-subtitle {
+    font-style: italic;
+}
+
+.item>.item-details {
+    float: right;
+    text-align: right;
+}
+
+.item>.item-details>.item-details-title {
+    font-weight: bold;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Section specific */
+/* basics */
+.vertical-separator {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.vertical-separator:not(:first-child) {
+    border-left: 1px solid #000;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.col {
+    flex: 1;
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+}
+.title-subtitle {
+    flex: 1;
+    min-width: 80px;
+}
+.url {
+    margin-left: 20px;
+    word-break: break-all; 
+    overflow-wrap: break-word; 
+}
+a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+/* Set some print settings. */
+@media print {
+    @page {
+        size: portrait;
+        margin: 10mm 25mm;
+    }
+    .resume {
+        max-width: 100%;
+        border: 0px;
+        background: #fff;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    body,
+    html,
+    .resume {
+        margin: 0px;
+        padding: 0px;
+    }
+    .controls {
+        display: none;
+    }
+    .section {
+        page-break-inside: avoid; 
+        margin-bottom: 20px; 
+    }
+
+    .section h2 {
+        page-break-after: avoid; 
+    }
+
+    .row, .col {
+        page-break-inside: avoid; 
+    }
+}
+    </style>
+
+    </head>
+    <body>
+
+    <div id="resume">
+        <div class="section">
+            <section id="basics">
+                <h1>Freddy Huaylla</h1>
+                <div class="contact centered">
+            <span class="vertical-separator">Fullstack Developer | JavaScript/TypeScript | AWS Certified</span><span class="vertical-separator"><a href="mailto:fmarcosdev@gmail.com">fmarcosdev@gmail.com</a></span><span class="vertical-separator">+56 9 7464 6583</span>        <span class="vertical-separator">Arica, CL</span>
+            <span class="vertical-separator"><a href="https://fmarcos.dev">fmarcos.dev</a></span>    </div>
+                <div class="summary">
+                    <h2>Summary</h2>
+                    <p>Desarrollador Fullstack Senior con más de 4 años de experiencia en arquitecturas escalables utilizando JavaScript/TypeScript (NestJS, Next.js). Experto en optimización de rendimiento (+70% en métricas Lighthouse), integración de IA generativa (OpenAI, LangChain) y DevOps (Docker, CI/CD). Certificado AWS y especialista en desarrollo ágil (Scrum/Kanban). Lideré equipos en proyectos SaaS para 50k+ usuarios y soluciones ERP con WebSockets.</p>
+                </div>
+            </section>
+        </div>
+        <div class="section">
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul class="item">
+                    <li>
+                        <strong>Backend Development</strong>: Node.js, NestJS, Express, Microservices, WebSockets
+                    </li>
+                    <li>
+                        <strong>Frontend Development</strong>: React, Next.js, JavaScript, TypeScript, SEO Optimization
+                    </li>
+                    <li>
+                        <strong>DevOps &amp; Cloud</strong>: AWS Lambda, Docker, CI/CD, Kubernetes, Serverless Architecture
+                    </li>
+                    <li>
+                        <strong>Artificial Intelligence</strong>: OpenAI, LangChain, Machine Learning APIs, Natural Language Processing
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="section">
+            <section id="work">
+                <h2>Work Experience</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-header-subtitle">
+                        Senior Fullstack Developer
+                    </div>
+                </div>
+                <div class="item-details">
+                    <div class="date">
+                        Mar 2021 — Jan 2024
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                
+                        <ul class="highlights">
+                            <li>Migración a microfrontends con Module Federation: reducción del 30% en tiempos de despliegue.</li>
+                            <li>Arquitectura backend con NestJS y WebSockets: soporte para 10k conexiones concurrentes.</li>
+                            <li>Pipeline CI/CD con GitHub Actions: cobertura de pruebas del 90%.</li>
+                            <li>Integración de OpenAI para generación de reportes automatizados: reducción del 40% en tiempo manual.</li>
+                        </ul>
+            </div><div class="item">
+                <div class="item-header">
+                    <div class="item-header-subtitle">
+                        Fullstack Lead
+                    </div>
+                </div>
+                <div class="item-details">
+                    <div class="date">
+                        Jun 2020 — Feb 2021
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                
+                        <ul class="highlights">
+                            <li>Sistema de scraping multi-fuente con Python + Puppeteer: procesamiento de 50k productos/día.</li>
+                            <li>Frontend con Next.js ISR: indexación de 100k páginas (+60% SEO).</li>
+                            <li>Automatización de despliegues con AWS CodePipeline.</li>
+                        </ul>
+            </div></section>
+        </div>
+        <div class="section">
+        </div>
+        <div class="section">
+            <section id="education">
+                <h2>Education</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-header-title">
+                        Universidad de Chile
+                    </div>
+                    <div class="item-header-subtitle">
+                        Bachelor
+                    </div>
+                </div>
+                <div class="item-details">
+                    <div class="date">
+                        Mar 2012 — Dec 2018
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div></section>
+        </div>
+        <div class="section">
+            <section id="profiles">
+                <h2>Profiles</h2>
+                <div class="item">
+                        <div class="row">
+                            <div class="col">
+                                
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                
+                            </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="section">
+        </div>
+        <div class="section">
+            <section id="projects">
+              <h2>Projects</h2>
+              <div class="item">
+                    </div>
+            </section>
+        </div>
+        <div class="section">
+        </div>
+    </div>
+    
+    </body>
+</html>
