@@ -7,15 +7,16 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "simulate-worflow-generate-docs": "npx resume export --theme dev-ats --format html src/generate-resume-files-by-workflow/cv.html && wkhtmltopdf src/generate-resume-files-by-workflow/cv.html src/generate-resume-files-by-workflow/cv.pdf && pandoc src/generate-resume-files-by-workflow/cv.html -o src/generate-resume-files-by-workflow/cv.docx"
   },
   "dependencies": {
-    "jsonresume-theme-dev-ats": "^1.0.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "resume-cli": "^3.0.8"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "jsonresume-theme-dev-ats": "^1.0.1",
+    "resume-cli": "^3.0.8",
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",

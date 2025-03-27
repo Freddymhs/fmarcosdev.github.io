@@ -3,53 +3,77 @@
   "meta": {
     "ats": {
       "version": "1.0",
-      "optimizedFor": ["Greenhouse", "Workday", "Lever"]
+      "optimizedFor": ["-", "-", "-"]
     }
   },
   "basics": {
-    "image": "",
+    "image": "https://gravatar.com/userimage/178512464/8c8ef92b4688b3493ca52746b7775086.jpeg",
     "name": "Freddy Huaylla",
-    "label": "Fullstack Developer | JavaScript/TypeScript | AWS Certified",
+    "label": "Fullstack Developer | JavaScript/TypeScript | Flutter",
     "email": "fmarcosdev@gmail.com",
     "phone": "+56 9 7464 6583",
     "url": "https://fmarcos.dev",
-    "summary": "Desarrollador Fullstack Senior con más de 4 años de experiencia en arquitecturas escalables utilizando JavaScript/TypeScript (NestJS, Next.js). Experto en optimización de rendimiento (+70% en métricas Lighthouse), integración de IA generativa (OpenAI, LangChain) y DevOps (Docker, CI/CD). Certificado AWS y especialista en desarrollo ágil (Scrum/Kanban). Lideré equipos en proyectos SaaS para 50k+ usuarios y soluciones ERP con WebSockets.",
+    "summary": "Desarrollador Fullstack con 3 años de experiencia especializado en tecnologías JavaScript (React, Next.js, Nest.js) y Flutter. Me destaco por priorizar la usabilidad, la optimización del rendimiento y el desarrollo de interfaces. He integrado soluciones de IA generativa utilizando LangChain y participado en proyectos como ERP multiplataforma en tiempo real, software SAAS de alto rendimiento y prácticas esenciales de DevOps. Mi metodología incluye pruebas unitarias, integración continua con GitHub Actions y colaboración en equipos multidisciplinarios. Busco aplicar mi experiencia técnica en proyectos ambiciosos, seguir creciendo profesionalmente y aportar soluciones orientadas al usuario y al cliente",
     "location": {
       "city": "Arica",
       "countryCode": "CL",
-      "timezone": "UTC-3"
+      "timezone": "UTC-4"
     },
     "profiles": [
       {
+        "username": "freddymhs",
         "network": "LinkedIn",
-        "url": "https://linkedin.com/in/freddy-huaylla-dev"
+        "url": "https://www.linkedin.com/in/freddymhs/"
       },
       {
+        "username": "Freddymhs",
         "network": "GitHub",
-        "url": "https://github.com/freddy-huaylla"
+        "url": "https://github.com/Freddymhs"
       },
       {
+        "username": "proyects",
         "network": "Portfolio",
-        "url": "https://fmarcos.dev"
+        "url": "https://www.fmarcos.dev/proyects"
+      },
+      {
+        "username": "fmarcosdev",
+        "network": "Webiste",
+        "url": "https://www.fmarcos.dev"
+      },
+      {
+        "username": "fmarcos",
+        "network": "Hackerrank",
+        "url": "https://www.hackerrank.com/profile/fmarcos"
       }
     ]
   },
   "work": [
     {
-      "company": "Tech Solutions Inc.",
-      "position": "Senior Fullstack Developer",
+      "name": "JyL LTDA.",
+      "position": "Fullstack Developer",
       "type": "full-time",
-      "url": "https://techsolutions.com",
-      "startDate": "2021-03",
-      "endDate": "2024-01",
-      "summary": "Lideré el desarrollo de soluciones escalables y la implementación de tecnologías avanzadas como microfrontends, WebSockets y pipelines CI/CD.",
+      "url": "",
+      "startDate": "2024-04",
+      "endDate": "2024-12",
+      "summary": "Responsable del desarrollo de soluciones multiplataforma, implementando tecnologías avanzadas como Flutter, WebSockets y CI/CD, y utilizando GraphQL, PostgreSQL y Supabase Auth para garantizar integraciones robustas y seguras.",
       "highlights": [
-        "Migración a microfrontends con Module Federation: reducción del 30% en tiempos de despliegue.",
-        "Arquitectura backend con NestJS y WebSockets: soporte para 10k conexiones concurrentes.",
-        "Pipeline CI/CD con GitHub Actions: cobertura de pruebas del 90%.",
-        "Integración de OpenAI para generación de reportes automatizados: reducción del 40% en tiempo manual."
+        "Desarrollo de aplicaciones multiplataforma con Flutter, asegurando una experiencia de usuario consistente y de alto rendimiento.",
+        "Implementación de WebSockets para la visualización de información en tiempo real, soportando múltiples conexiones simultáneas.",
+        "Diseño y optimización de APIs GraphQL respaldadas por PostgreSQL.",
+        "Automatización de pipelines CI/CD con GitHub Actions, logrando alta cobertura en pruebas y despliegues ágiles."
       ],
-      "technologies": ["NestJS", "Next.js", "AWS Lambda", "Docker", "Jest"],
+      "technologies": [
+        "Flutter",
+        "GraphQL",
+        "Supabase",
+        "Express",
+        "TypeScript",
+        "Apollo Server",
+        "Nexus",
+        "Prisma",
+        "PostgreSQL",
+        "WebSockets"
+      ],
       "atsKeywords": [
         "microservices",
         "websockets",
@@ -61,97 +85,181 @@
       ]
     },
     {
-      "company": "Freelance (Proyecto AhorraMax)",
-      "position": "Fullstack Lead",
-      "type": "contract",
-      "startDate": "2020-06",
-      "endDate": "2021-02",
-      "summary": "Desarrollé un sistema de scraping multi-fuente y un frontend optimizado para SEO con Next.js ISR.",
+      "name": "Klog",
+      "position": "Support/Fullstack",
+      "type": "full-time",
+      "url": "",
+      "startDate": "2021-02",
+      "endDate": "2024-03",
+      "summary": "Desarrollo web con React (v18) y Next.js (v13) usando TypeScript, implementando arquitecturas escalables con GraphQL (Apollo Client) y optimizando rendimiento mediante técnicas avanzadas de caching. Lideré la refactorización de código legacy y establecí prácticas de Git/GitHub para mejorar la colaboración del equipo.",
       "highlights": [
-        "Sistema de scraping multi-fuente con Python + Puppeteer: procesamiento de 50k productos/día.",
-        "Frontend con Next.js ISR: indexación de 100k páginas (+60% SEO).",
-        "Automatización de despliegues con AWS CodePipeline."
+        "Desarrollo de interfaces con React 18 + Next.js 13 (App Router)",
+        "Refactorización de class components a functional components con hooks",
+        "Implementación de Apollo Client con optimistic UI y normalización de cache GraphQL",
+        "Creación de componentes reutilizables usando Ant Design y Klog Design System interno",
+        "Implementación de Conventional Commits con Husky hooks",
+        "Gestión de estado global con Context API + useReducer"
       ],
-      "technologies": ["Next.js", "Python", "MongoDB", "AWS S3"],
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Ant Design",
+        "GraphQL",
+        "Apollo Client",
+        "Context API",
+        "ESLint",
+        "Prettier",
+        "Husky",
+        "Git",
+        "GitHub Actions",
+        "Vitest",
+        "Webpack",
+        "Chrome DevTools"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Tipddy",
+      "position": "FrontEnd Developer",
+      "type": "full-time",
+      "url": "",
+      "startDate": "2020-06",
+      "endDate": "2021-01",
+      "summary": "Desarrollé soluciones frontend personalizadas en WordPress usando PHP y CSS para módulos farmacéuticos en Chile. Implementé mejoras de UI/UX y gestioné campañas publicitarias mediante código. Adicionalmente, participé en proyectos con React y Angular, utilizando metodologías ágiles con JIRA.",
+      "highlights": [
+        "Personalización de módulos WordPress usando PHP para adaptarlos a requerimientos específicos",
+        "Mejora de interfaces de usuario con CSS para clientes del sector farmacéutico",
+        "Gestión e implementación de campañas publicitarias mediante desarrollo frontend",
+        "Participación en proyectos con React y Angular para desarrollo de funcionalidades avanzadas",
+        "Trabajo bajo metodologías ágiles utilizando JIRA para gestión de tareas",
+        "Optimización de rendimiento frontend en sitios WordPress",
+        "Colaboración con equipos multidisciplinarios para implementación de features"
+      ],
+      "technologies": [
+        "PHP",
+        "WordPress",
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "React",
+        "Angular",
+        "JIRA",
+        "Metodologías Ágiles"
+      ],
       "visible": true
     }
   ],
   "projects": [
     {
-      "title": "ERP Multiplataforma",
-      "description": "Sistema de gestión empresarial para retail con 5 sucursales.",
-      "role": "Tech Lead",
-      "url": "https://github.com/freddy-huaylla/erp-retail",
-      "startDate": "2022-01",
-      "endDate": "2022-09",
+      "name": "Lends",
+      "description": "Aplicación web progresiva (PWA) para gestión de préstamos con autenticación de Google y sincronización con firebase realtime.",
+      "url": "https://github.com/Freddymhs/my-lends",
+      "startDate": "2024-02",
+      "endDate": "Presente",
       "highlights": [
-        "Reducción de latencia de 500ms a 200ms con Socket.io.",
-        "Implementación de autenticación JWT con refresh tokens rotativos."
+        "Implementación de autenticación con Google Auth Provider mediante Firebase",
+        "Sincronización en tiempo real con Firebase Realtime Database",
+        "Diseño responsive con Ant Design para una experiencia consistente en móvil y desktop",
+        "Configuración completa de PWA con Workbox para funcionamiento offline",
+        "Gestión de estado global con React Context API",
+        "Enrutamiento dinámico con React Router v6"
       ],
-      "technologies": ["NestJS", "React", "PostgreSQL", "Redis"],
       "metrics": {
-        "users": "500+",
-        "performance": "95/100 Lighthouse"
+        "performance": "90+/100 Lighthouse",
+        "offlineCapability": "Funcionalidad básica disponible sin conexión",
+        "authSpeed": "Autenticación en <2 segundos"
       }
     }
   ],
   "skills": [
-    {
-      "name": "Backend Development",
-      "level": "Advanced",
-      "keywords": [
-        "Node.js",
-        "NestJS",
-        "Express",
-        "Microservices",
-        "WebSockets"
-      ]
-    },
     {
       "name": "Frontend Development",
       "level": "Advanced",
       "keywords": [
         "React",
         "Next.js",
-        "JavaScript",
+        "Flutter",
         "TypeScript",
-        "SEO Optimization"
+        "JavaScript",
+        "Ant Design",
+        "CSS",
+        "HTML",
+        "Context API",
+        "Webpack"
       ]
     },
     {
-      "name": "DevOps & Cloud",
-      "level": "Intermediate",
+      "name": "Backend/API Development",
+      "level": "Advanced",
       "keywords": [
-        "AWS Lambda",
-        "Docker",
+        "GraphQL",
+        "Apollo Server",
+        "Apollo Client",
+        "Express",
+        "Nexus",
+        "REST APIs",
+        "WebSockets",
+        "Prisma"
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "Intermediate",
+      "keywords": ["Flutter", "Cross-platform"]
+    },
+    {
+      "name": "Database & Auth",
+      "level": "Advanced",
+      "keywords": ["PostgreSQL", "Supabase", "Prisma", "Database Design"]
+    },
+    {
+      "name": "Development Tools",
+      "level": "Advanced",
+      "keywords": [
+        "Git",
+        "GitHub Actions",
         "CI/CD",
-        "Kubernetes",
-        "Serverless Architecture"
+        "Husky",
+        "ESLint",
+        "Prettier",
+        "Chrome DevTools",
+        "Vitest"
       ]
     },
     {
-      "name": "Artificial Intelligence",
+      "name": "CMS & Legacy Systems",
       "level": "Intermediate",
+      "keywords": ["WordPress", "PHP", "jQuery"]
+    },
+    {
+      "name": "Methodologies",
+      "level": "Advanced",
       "keywords": [
-        "OpenAI",
-        "LangChain",
-        "Machine Learning APIs",
-        "Natural Language Processing"
+        "Agile/Scrum",
+        "JIRA",
+        "TDD",
+        "Microservices",
+        "Code Refactoring"
       ]
     }
   ],
   "education": [
     {
-      "institution": "Universidad de Chile",
-      "area": "Ingeniería Civil en Computación",
-      "studyType": "Bachelor",
-      "startDate": "2012-03",
-      "endDate": "2018-12",
-      "gpa": "5.8/7.0",
+      "institution": "INACAP",
+      "area": "Técnico de Nivel Superior en Analista Programador",
+      "studyType": "Técnico Superior",
+      "location": "Arica, CL",
+      "specialization": "Analista Programdor",
+      "startDate": "2017-03",
+      "endDate": "2019-12",
+      "gpa": "0",
       "courses": [
-        "Arquitectura de Software",
-        "Bases de Datos Distribuidas",
-        "Inteligencia Artificial"
+        "Bases de Datos SQL",
+        "Fundamentos de C#",
+        "Desarrollo Web con PHP y CSS3",
+        "Programación Orientada a Objetos (Java)",
+        "Implementación de Active Directory para administración centralizada de múltiples"
       ]
     }
   ],
@@ -163,21 +271,58 @@
     },
     {
       "language": "Inglés",
-      "fluency": "Avanzado (C1)",
-      "certificate": "TOEFL 620"
+      "fluency": "Intermedio (B1)",
+      "certificate": ""
     }
   ],
-  "certifications": [
+  "certificates": [
     {
-      "name": "AWS Certified Developer - Associate",
-      "issuer": "Amazon Web Services",
-      "date": "2023-05",
-      "url": "https://awscertifications.com/verify/123456"
+      "name": "Curso de ECMAScript 6+",
+      "issuer": "Platzi",
+      "date": "2022-02",
+      "url": "https://platzi.com/p/freddyhuaylla/curso/1815-ecmascript-6/diploma/detalle/"
     },
     {
-      "name": "Scrum Master Professional Certificate",
-      "issuer": "Scrum.org",
-      "date": "2022-11"
+      "name": "JavaScript avanzado: Expresiones regulares",
+      "issuer": "LinkedIn Learning",
+      "date": "2021-03",
+      "url": "https://www.linkedin.com/learning/certificates/78f3324d3b5dba3625bbd48999e3382fd5f73b7ed09d79d4efc5c1e27c64822e?trk=backfilled_certificate"
+    },
+    {
+      "name": "Node.js esencial",
+      "issuer": "LinkedIn Learning",
+      "date": "2021-03",
+      "url": "https://www.linkedin.com/learning/certificates/2ebd0574778e42520f590121223029b368051e28af528ff3a301c55cdcf10e0f?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BnRGVje0tQxydqZMnCFBaGA%3D%3D"
+    },
+    {
+      "name": "JavaScript avanzado: Buenas prácticas",
+      "issuer": "LinkedIn Learning",
+      "date": "2021-02",
+      "url": "https://www.linkedin.com/learning/certificates/a335b74b1c83af91aa1afa6a59e61c5217be40c03a0714f924501579f04e8df2?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BOIWRW6BHQoWoLcTlhIgfNg%3D%3D"
+    },
+    {
+      "name": "Fundamentos de big data",
+      "issuer": "LinkedIn Learning",
+      "date": "2021-01",
+      "url": "https://www.linkedin.com/learning/certificates/3e6bd5ac2409e2cf4c6b730697ae99c9c633a0d3ed4f900b85e142b4c5277936?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BOIWRW6BHQoWoLcTlhIgfNg%3D%3D"
+    },
+    {
+      "name": "Fundamentos de big data: Técnicas y conceptos",
+      "issuer": "LinkedIn Learning",
+      "date": "2021-01",
+      "url": "https://www.linkedin.com/learning/certificates/a7dbc26991f406ceb0381fa91a1c9901d5e02856602e3b90abbb873cfe748831?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BOIWRW6BHQoWoLcTlhIgfNg%3D%3D"
+    },
+    {
+      "name": "Desarrollo de Apps",
+      "issuer": "Google Actívate",
+      "date": "2020-11",
+      "url": ""
+    },
+    {
+      "name": "Cloud Computing",
+      "issuer": "Google Actívate",
+      "date": "2020-08",
+      "url": ""
     }
   ],
   "publications": [
@@ -188,5 +333,34 @@
       "date": "2023-08"
     }
   ],
-  "volunteer": []
+  "volunteer": [],
+  "interests": [
+    {
+      "name": "Tecnología Innovadora",
+      "keywords": [
+        "Impresión 3D",
+        "Prototipado rápido",
+        "Automatización en el hogar",
+        "Tendencias en desarrollo web"
+      ]
+    },
+    {
+      "name": "Tiempo Personal",
+      "keywords": [
+        "Actividades familiares",
+        "Senderismo",
+        "Cocina experimental",
+        "Fotografía de paisajes"
+      ]
+    },
+    {
+      "name": "Desarrollo de Videojuegos",
+      "keywords": [
+        "Diseño de mapas para StarCraft II",
+        "Balance de mecánicas de juego",
+        "Modding",
+        "Estrategias RTS"
+      ]
+    }
+  ]
 }
