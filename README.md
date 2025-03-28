@@ -162,3 +162,4 @@ jobs:
 <!-- cosas qe agregar a este readme: -->
 <!-- view transition -->
 <!-- react router -->
+<!-- tailwindcss/vite -->
