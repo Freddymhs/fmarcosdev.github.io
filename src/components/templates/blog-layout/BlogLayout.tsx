@@ -1,5 +1,5 @@
 // MainLayout.tsx
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import HeaderNavigation from "../../molecules/header-navigation/HeaderNavigation";
 
 interface BlogLayout {
