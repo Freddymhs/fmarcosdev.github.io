@@ -3,5 +3,13 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "module": "ESNext", // Utiliza ESNext para módulos
+    "moduleResolution": "node", // Resolución de módulos al estilo Node.js
+    "target": "ESNext", // Utiliza ESNext para aprovechar las últimas características
+    "esModuleInterop": true, // Asegura la interoperabilidad de los módulos
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }

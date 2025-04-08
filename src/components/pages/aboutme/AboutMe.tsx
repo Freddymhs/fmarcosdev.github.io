@@ -1,5 +1,5 @@
 const AboutMe = () => {
-  return "Contenido about me";
+  return <div>HKZ cambie de pagina</div>;
 };
 
 export default AboutMe;

@@ -6,9 +6,12 @@ import packageJson from "../../../../package.json";
 import ProgressBar from "../../atoms/progressbar";
 import MessageArea from "../../atoms/messageArea";
 import LandingLayout from "../../templates/landing-layout/Landing-layout";
+import { useNavigate } from "react-router";
 
 export default function Landing() {
+  const navigate = useNavigate();
   const versionApp = useMemo(() => `V.${packageJson.version}`, []);
+
   const [message, setMessage] = useState("");
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,9 +20,10 @@ export default function Landing() {
     () => WELCOME_MESSAGES[Math.floor(Math.random() * WELCOME_MESSAGES.length)],
     []
   );
+
   useEffect(() => {
     if (progress === 100 && isLoading === false) {
-      // aqui redirecionar a la pagina de inicio
+      navigate("/about_me");
     }
   }, [progress, isLoading]);
 
