@@ -1,15 +1,14 @@
 {
   "name": "fmarcosdev.github.io",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.10.0",
   "type": "module",
   "scripts": {
-    "minor-version": "npm version minor",
     "dev": "vite --host --open",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "simulate-worflow-generate-docs": "npx resume export --theme dev-ats --format html src/generate-resume-files-by-workflow/cv.html && wkhtmltopdf src/generate-resume-files-by-workflow/cv.html src/generate-resume-files-by-workflow/cv.pdf && pandoc src/generate-resume-files-by-workflow/cv.html -o src/generate-resume-files-by-workflow/cv.docx"
+    "simulate-worflow-generate-docs": "npx resume export --theme dev-ats --format html src/generate-resume-files-by-workflow/cv.html && wkhtmltopdf src/generate-resume-files-by-workflow/cv.html src/generate-resume-files-by-workflow/cv.pdf && pandoc src/generate-resume-files-by-workflow/cv.html -o src/generate-resume-files-by-workflow/cv.docx",
+    "release": "npm version minor && git push -f"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.17",
