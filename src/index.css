@@ -1,13 +1,21 @@
+/* import old version  config tailwind theme */
+@config "../tailwind.config.js";
+/* Importar Tailwind CSS 4 */
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Space Mono'; 
-  src: url('./assets/fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
-  font-weight: normal; 
-  font-style: normal; 
-  font-display: swap; 
+  font-family: "Space Mono";
+  src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-*{
-  font-family: 'Space Mono'; 
+@theme {
+  /* --color-yellow-50: oklch(0.95 0.05 175); */
+  --color-yellow: #dfd829; /* Amarillo (Fondo) */
+  --color-dark-gray: #252830; /* Gris oscuro (Fondo) */
+  --color-green: #61a059; /* Verde (Títulos) */
+  --color-dark-green: #095957; /* Verde oscuro (Texto) */
+  --color-cream: #fff5e1; /* Crema (Secciones) */
 }
