@@ -4,8 +4,9 @@
   "version": "0.18.0",
   "type": "module",
   "scripts": {
+    "review": "tsc -b &&  vite build && kill-port 4173 && npx vite preview",
     "dev": "kill-port 3000 && vite --host --open --port 3000",
-    "build": "tsc -b &&  vite build && kill-port 4173 && npx vite preview ",
+    "build": "tsc -b &&  vite build",
     "simulate-worflow-generate-docs": "npx resume export --theme dev-ats --format html src/generate-resume-files-by-workflow/cv.html && wkhtmltopdf src/generate-resume-files-by-workflow/cv.html src/generate-resume-files-by-workflow/cv.pdf && pandoc src/generate-resume-files-by-workflow/cv.html -o src/generate-resume-files-by-workflow/cv.docx",
     "version-upgrade": "npm version minor --no-git-tag-version && git add . && git commit -m \"chore: bump version to $(node -p -e \"require('./package.json').version\")\" && git push -f",
     "cypress": "cypress open"
