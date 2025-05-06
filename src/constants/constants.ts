@@ -308,3 +308,85 @@ export const WELCOME_MESSAGES = [
   "`Symbol.iterator` permite hacer cualquier objeto iterable para `for...of`.",
   "Los tagged templates permiten procesar strings de plantillas con funciones personalizadas.",
 ];
+
+export const contactsData = [
+  {
+    name: "fmarcosdev@gmail.com",
+    url: "fmarcosdev@gmail.com",
+    type: "mail",
+  },
+  {
+    name: "linkedin.com/in/freddymhs/",
+    url: "https://linkedin.com/in/freddymhs/",
+    type: "linkedin",
+  },
+  // {
+  //   name: "github.com/Freddymhs",
+  //   url: "https://github.com/Freddymhs",
+  //   type: "github",
+  // },
+  // { name: "mi-blog.dev", url: "https://mi-blog.dev", type: "web" },
+];
+
+export const ExistentPages = [
+  { to: HOME_PAGE, label: HOME_PAGE },
+  { to: SOCIAL_PAGE, label: SOCIAL_PAGE },
+  { to: CERTIFICATES_PAGE, label: CERTIFICATES_PAGE },
+  { to: BLOG_PAGE, label: BLOG_PAGE },
+];
+export const PAGES = ExistentPages.filter(({ to }) =>
+  [HOME_PAGE, CERTIFICATES_PAGE].includes(to)
+);
+
+export const copyRightText = "© 2025 fmarcos.dev";
+
+export const TECH_REACT = "React";
+export const TECH_NEXTJS = "Next.js";
+export const TECH_TYPESCRIPT = "TypeScript";
+export const TECH_JAVASCRIPT = "JavaScript";
+export const TECH_GRAPHQL = "GraphQL";
+export const TECH_FLUTTER = "Flutter";
+export const TECH_SUPABASE = "Supabase";
+export const TECH_POSTGRESQL = "PostgreSQL";
+export const TECH_APOLLO_CLIENT = "Apollo Client";
+export const TECH_APOLLO_SERVER = "Apollo Server";
+export const TECH_EXPRESS = "Express";
+export const TECH_PRISMA = "Prisma";
+export const TECH_WEBSOCKETS = "WebSockets";
+export const TECH_GIT = "Git";
+export const TECH_GITHUB_ACTIONS = "GitHub Actions";
+export const TECH_PHP = "PHP";
+export const TECH_WORDPRESS = "WordPress";
+export const TECH_CSS = "CSS";
+export const TECH_HTML = "HTML";
+export const TECH_ANGULAR = "Angular";
+export const TECH_JIRA = "JIRA";
+
+export const techColors: Record<string, string> = {
+  [TECH_REACT]: "bg-blue-100 text-blue-800",
+  [TECH_NEXTJS]: "bg-black text-white",
+  [TECH_TYPESCRIPT]: "bg-blue-100 text-blue-800",
+  [TECH_JAVASCRIPT]: "bg-yellow-100 text-yellow-800",
+  [TECH_GRAPHQL]: "bg-pink-100 text-pink-800",
+  [TECH_FLUTTER]: "bg-cyan-100 text-cyan-800",
+  [TECH_SUPABASE]: "bg-emerald-100 text-emerald-800",
+  [TECH_POSTGRESQL]: "bg-indigo-100 text-indigo-800",
+  [TECH_APOLLO_CLIENT]: "bg-purple-100 text-purple-800",
+  [TECH_APOLLO_SERVER]: "bg-purple-100 text-purple-800",
+  [TECH_EXPRESS]: "bg-gray-100 text-gray-800",
+  [TECH_PRISMA]: "bg-teal-100 text-teal-800",
+  [TECH_WEBSOCKETS]: "bg-violet-100 text-violet-800",
+  [TECH_GIT]: "bg-orange-100 text-orange-800",
+  [TECH_GITHUB_ACTIONS]: "bg-gray-100 text-gray-800",
+  [TECH_PHP]: "bg-indigo-100 text-indigo-800",
+  [TECH_WORDPRESS]: "bg-blue-100 text-blue-800",
+  [TECH_CSS]: "bg-blue-100 text-blue-800",
+  [TECH_HTML]: "bg-orange-100 text-orange-800",
+  [TECH_ANGULAR]: "bg-red-100 text-red-800",
+  [TECH_JIRA]: "bg-blue-100 text-blue-800",
+};
+
+export const professionalExperienceText = "Experiencia Profesional";
+export const certificationsText = "Certificaciones";
+
+export const awardsText = "Logros destacados";

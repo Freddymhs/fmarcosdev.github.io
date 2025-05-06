@@ -75,6 +75,8 @@ Integrar CMS para el blog
 
 Mejorar métricas de performance (Lighthouse)
 
+View transition de react
+
 ## 🏗️ Arquitectura del Proyecto
 
 
@@ -159,7 +161,12 @@ jobs:
           pandoc cv.html -o cv.docx
 ```
 
-<!-- cosas qe agregar a este readme: -->
-<!-- view transition -->
-<!-- react router -->
-<!-- tailwindcss/vite -->
+
+
+
+## how to use
+- npm i
+- npm run dev
+
+## how to deploy and use
+- aca debemos entender como funciona el workflow porqe eso lo usaremos para generar CV

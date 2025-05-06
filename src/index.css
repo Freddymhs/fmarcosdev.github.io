@@ -12,10 +12,18 @@
 }
 
 @theme {
-  /* --color-yellow-50: oklch(0.95 0.05 175); */
-  --color-yellow: #dfd829; /* Amarillo (Fondo) */
-  --color-dark-gray: #252830; /* Gris oscuro (Fondo) */
-  --color-green: #61a059; /* Verde (Títulos) */
-  --color-dark-green: #095957; /* Verde oscuro (Texto) */
-  --color-cream: #fff5e1; /* Crema (Secciones) */
+  --color-primary-color: #f1de63;
+  --color-secondary-color: #252830;
+  --color-important-color: #8cb348;
+  --color-read-color: #095957;
+  --color-read-white-color: #fff5e1;
+}
+
+header {
+  font-family: "Space Mono", sans-serif;
+  font-size: 0.7rem;
+}
+
+html {
+  background-color: var(--color-primary-color);
 }

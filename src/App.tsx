@@ -1,6 +1,10 @@
+import packageJson from "../package.json";
+import { useMemo } from "react";
 import { Navigate, Route, Routes } from "react-router";
 import MainLayout from "./components/templates/main-layout/MainLayout";
 import BlogLayout from "./components/templates/blog-layout/BlogLayout";
+import LandingLayout from "./components/templates/landing-layout/Landing-layout";
+
 import {
   BLOG_PAGE,
   CERTIFICATES_PAGE,
@@ -16,9 +20,15 @@ import {
 } from "./components/pages";
 
 const App = () => {
+  const versionApp = useMemo(() => `V.${packageJson.version}`, []);
   const routesWithLayout = (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route
+        path="/"
+        element={
+          <LandingLayout version={versionApp} children={<LandingPage />} />
+        }
+      />
       <Route
         path={HOME_PAGE}
         element={
