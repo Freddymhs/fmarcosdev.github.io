@@ -1,16 +1,13 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { WELCOME_MESSAGES } from "../../../constants/constants";
-import packageJson from "../../../../package.json";
 import ProgressBar from "../../atoms/progressbar";
 import MessageArea from "../../atoms/messageArea";
-import LandingLayout from "../../templates/landing-layout/Landing-layout";
 import { useNavigate } from "react-router";
 
 export default function Landing() {
   const navigate = useNavigate();
-  const versionApp = useMemo(() => `V.${packageJson.version}`, []);
 
   const [message, setMessage] = useState("");
   const [progress, setProgress] = useState(0);
@@ -28,10 +25,8 @@ export default function Landing() {
   }, [progress, isLoading]);
 
   useEffect(() => {
-    // Establecer el mensaje inicial
     setMessage(getRandomMessage());
 
-    // Configurar el intervalo para el progreso
     const progressInterval = setInterval(() => {
       setProgress((currentProgress) => {
         if (currentProgress >= 100) {
@@ -43,15 +38,14 @@ export default function Landing() {
       });
     }, 70);
 
-    // Limpiar el intervalo cuando el componente se desmonte
     return () => clearInterval(progressInterval);
   }, [getRandomMessage]);
 
   return (
-    <LandingLayout version={versionApp}>
+    <>
       <MessageArea message={message} />
       <ProgressBar progress={progress} />
-    </LandingLayout>
+    </>
   );
 }
 //

@@ -1,8 +1,18 @@
+import { tv } from "tailwind-variants";
+
 function ProgressBar({ progress }: { progress: number }) {
+  const areaProgressBarStyle = tv({
+    base: "relative h-3 bg-[var(--color-secondary-color)] border border-[var(--color-primary-color)]/50 rounded-sm",
+  });
+
+  const loadingEffectStyle = tv({
+    base: "absolute top-0 left-0 h-full bg-[var(--color-primary-color)] transition-all duration-300",
+  });
+
   return (
-    <div className="relative h-3 bg-black/60 border border-yellow-500/50 rounded-sm">
+    <div className={areaProgressBarStyle()}>
       <div
-        className="top-0 left-0 h-full bg-gradient-to-r from-yellow-300 to-yellow-900 transition-all duration-300"
+        className={loadingEffectStyle()}
         style={{ width: `${progress}%` }}
         aria-valuenow={progress}
         role="progressbar"
