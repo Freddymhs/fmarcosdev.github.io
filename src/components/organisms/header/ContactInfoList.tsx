@@ -29,16 +29,32 @@ export const ContactInfoList = () => {
     );
   });
 
+  const handleDownload = async () => {
+    const response = await fetch(cv);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "CV_Freddy_Huaylla.pdf"; // nombre que tú quieras
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
   return (
     <div className={containerStyle({ isDesktop })}>
-      <a
-        href={cv}
-        download="fullstack-freddy-huaylla-cv.pdf"
+      {/* <a href={cv} download="CV.pdf" className={downloadCvStyle({ isDesktop })}>
+        Download CV
+        <Download size={18} className="ml-5" />
+      </a> */}
+      <button
+        onClick={handleDownload}
         className={downloadCvStyle({ isDesktop })}
       >
         Download CV
         <Download size={18} className="ml-5" />
-      </a>
+      </button>
 
       <div className={contactsContainerStyle({ isDesktop })}>
         {contactItems}

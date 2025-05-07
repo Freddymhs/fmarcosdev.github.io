@@ -117,7 +117,8 @@ const menuButtonStyle = tv({
 });
 
 const mainStyle = tv({
-  base: "flex-1 pt-5 pb-3",
+  // base: "flex-1 pt-5 pb-3",
+  base: "flex-1 pt-5 pb-3 min-h-[calc(100vh-17vh-55px)]",
 });
 
 // bg-left-bottom    bottom-0
