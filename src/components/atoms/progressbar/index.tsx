@@ -6,7 +6,7 @@ function ProgressBar({ progress }: { progress: number }) {
   });
 
   const loadingEffectStyle = tv({
-    base: "absolute top-0 left-0 h-full bg-[var(--color-primary-color)] transition-all duration-300",
+    base: "absolute top-0 left-0 h-full bg-[var(--color-important-color)] transition-all duration-300",
   });
 
   return (
