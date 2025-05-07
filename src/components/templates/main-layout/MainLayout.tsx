@@ -27,7 +27,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    setOpen((prev) => !prev);
+    setOpen(false);
   }, [location.pathname]);
 
   const Header = () => (
