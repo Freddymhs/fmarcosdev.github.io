@@ -36,7 +36,7 @@ export const ContactInfoList = () => {
 
     const a = document.createElement("a");
     a.href = url;
-    a.download = "CV_Freddy_Huaylla.pdf"; // nombre que tú quieras
+    a.download = "CV_Fullstack_Freddy_Huaylla.pdf";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -44,16 +44,12 @@ export const ContactInfoList = () => {
   };
   return (
     <div className={containerStyle({ isDesktop })}>
-      {/* <a href={cv} download="CV.pdf" className={downloadCvStyle({ isDesktop })}>
-        Download CV
-        <Download size={18} className="ml-5" />
-      </a> */}
       <button
         onClick={handleDownload}
         className={downloadCvStyle({ isDesktop })}
       >
-        Download CV
-        <Download size={18} className="ml-5" />
+        <span>Download CV</span>
+        <Download size={18} />
       </button>
 
       <div className={contactsContainerStyle({ isDesktop })}>
@@ -67,8 +63,6 @@ const contactButtonStyle = tv({
   base: `
 flex items-center
     no-underline border border-dashed border-secondary-color rounded-none fill-none stroke-2 stroke-secondary-color flex hover:bg-secondary-color hover:text-primary-color hover:stroke-primary-color text-xl
-
-
   `,
   variants: {
     isDesktop: {
@@ -116,11 +110,18 @@ const contactItemWrapperStyle = tv({
 });
 
 const downloadCvStyle = tv({
-  base: "flex items-center border border-dashed rounded-none  hover:bg-secondary-color hover:text-primary-color text-[0.9rem] ",
+  base: `
+    relative
+    flex items-center justify-center
+    text-[0.9rem]
+    rounded-none
+    border border-dashed 
+    hover:bg-secondary-color hover:text-primary-color
+   `,
   variants: {
     isDesktop: {
-      true: "justify-around px-21",
-      false: "justify-center p-2",
+      true: "px-21",
+      false: "p-2 w-full h-full",
     },
   },
 });
