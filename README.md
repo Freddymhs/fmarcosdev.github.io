@@ -75,8 +75,10 @@ Detalles del generador de docs por (CI/CD):
 
 
 ## 📌 Mejoras Futuras
-
-- tipografia
+- loading del primer modelo
+- icono web
+- errores de cambio pagina
+- tipografia de 2 tipos
 - Implementar i18n para soporte multilingüe
 - Añadir modo oscuro/claro
 - Integrar CMS para el blog

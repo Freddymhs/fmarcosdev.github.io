@@ -46,11 +46,11 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y wkhtmltopdf pandoc
-          npm install jsonresume-theme-dev-ats resume-cli
+          npm install jsonresume-theme-dev-ats-es resume-cli
 
       - name: 📋 Generate Multi Documents
         run: |
-          npx resume export --theme dev-ats --format html cv.html
+          npx resume export --theme dev-ats-es --format html cv.html
           wkhtmltopdf cv.html cv.pdf
           pandoc cv.html -o cv.docx
           ls
