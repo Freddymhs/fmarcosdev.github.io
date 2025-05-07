@@ -1,4 +1,4 @@
-#  Responsive website
+#  Responsive website [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/freddymhs/fmarcosdev.github.io/generate-resume.yml?branch=development)](https://github.com/freddymhs/fmarcosdev.github.io/actions/workflows/generate-resume.yml)
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
