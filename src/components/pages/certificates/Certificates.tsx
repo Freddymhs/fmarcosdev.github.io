@@ -24,7 +24,7 @@ const Certificates = () => {
     : certificates.slice(currentIndex, currentIndex + 1);
 
   const navBtn =
-    "p-2 rounded-full bg-cv-light text-cv-dark shadow-md hover:scale-110 transition";
+    "p-2 rounded-full bg-cv-light text-cv-dark shadow-md hover:scale-110 transition bg-important-color cursor-pointer";
 
   return (
     <section className="w-full py-16 bg-cv-yellow">
@@ -47,36 +47,35 @@ const Certificates = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
           {visible.map((cert) => (
             <div key={cert.name} className="w-full px-2">
-              <div className="bg-cv-light rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+              <div className="bg-cv-light rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform ">
                 <div className="relative">
+                  <Award size={21} className="ml-1" />
+
                   <img
-                    src={cert.image}
+                    src={"certificates/" + cert.name + ".png"}
                     alt={cert.name}
                     className="w-full h-55 object-contain"
                   />
-                  <div className="absolute top-2 right-21 bg-cv-green p-3 rounded-full text-cv-light">
-                    <Award size={16} />
-                  </div>
                 </div>
                 <div className="px-2 py-1">
                   <h3 className="font-semibold text-lg text-cv-dark font-mono truncate">
-                    {cert.name}
+                    {cert.name.replace(/-/g, " ")}
                   </h3>
                   <p className="text-sm text-cv-secondary">
                     {cert.issuer} • {cert.date}
                   </p>
-                  <div className="flex gap-5 mt-2 text-xs">
+                  <div className="flex gap-5 mt-2 text-xs ">
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
                         window.open(cert.url, "_blank");
                       }}
-                      className="flex items-center text-cv-secondary hover:opacity-80"
+                      className="flex items-center text-cv-secondary hover:opacity-80 cursor-pointer"
                     >
                       <ExternalLink size={14} className="mr-1" /> Ver
                     </button>
-                    <a href={cert.image} download>
-                      <button className="flex items-center text-cv-green hover:opacity-80">
+                    <a href={"certificates/" + cert.name + ".png"} download>
+                      <button className="flex items-center text-cv-green hover:opacity-80 cursor-pointer  ">
                         <Download size={14} className="mr-1" /> Descargar
                       </button>
                     </a>
