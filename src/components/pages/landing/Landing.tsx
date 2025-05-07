@@ -34,7 +34,7 @@ export default function Landing() {
           clearInterval(progressInterval);
           return 100;
         }
-        return currentProgress + 2;
+        return currentProgress + 1.8;
       });
     }, 70);
 
