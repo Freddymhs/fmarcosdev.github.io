@@ -1,0 +1,191 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/atomic/atoms/BaseHead.astro";
+import Header from "../components/atomic/molecules/Header.astro";
+import Footer from "../components/atomic/molecules/Footer.astro";
+import FormattedDate from "../components/atomic/atoms/FormattedDate.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en" class="bg-gray-50">
+  <head>
+    <BaseHead title={title} description={description} />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css"
+    /> -->
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <!-- <Header /> -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <article
+        class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden"
+      >
+        <div class="p-6 sm:p-8">
+          <div class="mb-6 text-center">
+            <div class="text-sm text-gray-600">
+              <FormattedDate date={pubDate} />
+              {
+                updatedDate && (
+                  <span class="ml-2 italic">
+                    (Updated: <FormattedDate date={updatedDate} />)
+                  </span>
+                )
+              }
+            </div>
+          </div>
+          <hr class="border-gray-200 mb-6" />
+          <div class="prose prose-lg max-w-none">
+            <slot />
+          </div>
+        </div>
+      </article>
+    </main>
+    <Footer />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
+    ></script>
+  </body>
+</html>
+
+<style is:global>
+  /* Estilos para encabezados */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+  }
+
+  /* Diferenciación visual entre encabezados */
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+  h5 {
+    font-size: 1.25em;
+  }
+  h6 {
+    font-size: 1em;
+  }
+
+  /* Estilos para párrafos */
+  p {
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    font-family: "Georgia", serif;
+  }
+
+  /* Estilos para enlaces */
+  a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition:
+      color 0.3s ease,
+      border-bottom 0.3s ease;
+  }
+
+  a:hover {
+    color: #2c3e50;
+    border-bottom: 1px solid #3498db;
+  }
+
+  /* Estilos para listas */
+  ul,
+  ol {
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+  }
+
+  ul li,
+  ol li {
+    margin-bottom: 0.5em;
+  }
+
+  /* Estilos para bloques de código */
+  pre,
+  code {
+    font-family: "Courier New", monospace;
+    border-radius: 5px;
+  }
+
+  pre {
+    padding: 1em;
+    overflow-x: auto;
+  }
+
+  code {
+    padding: 0.2em 0.4em;
+    font-size: 0.95em;
+    border-radius: 3px;
+  }
+
+  /* Estilos para blockquotes */
+  blockquote {
+    margin: 1.5em 0;
+    padding-left: 1em;
+    border-left: 4px solid #3498db;
+    color: #555;
+    font-style: italic;
+  }
+
+  /* Estilos para imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+  }
+
+  /* Tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.75em;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  /* Negritas y cursivas */
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+</style>

@@ -1,0 +1,80 @@
+---
+import Icon from "../molecules/Icon.astro";
+import Link from "../atoms/Link.astro";
+import {
+  BLOG_PAGE,
+  CERTIFICATES_PAGE,
+  HOME_PAGE,
+  PROJECTS_PAGE,
+  SOCIAL_PAGE,
+} from "../../../consts";
+const today = new Date();
+---
+
+<div class="headerPosition">
+  <div class="order">
+    <div class="nav-links">
+      <Link href={HOME_PAGE}>{HOME_PAGE}</Link>
+      <!-- <Link href={PROJECTS_PAGE}>{PROJECTS_PAGE}</Link> -->
+      <Link href={SOCIAL_PAGE}>{SOCIAL_PAGE}</Link>
+      <Link href={CERTIFICATES_PAGE}>{CERTIFICATES_PAGE}</Link>
+      <Link href={BLOG_PAGE}>{BLOG_PAGE}</Link>
+    </div>
+    <!--  -->
+    <div class="icon">
+      <!-- <Icon
+        name="@../../public/icon-github-alt.svg"
+        height="42px"
+        width="42px"
+      /> -->
+    </div>
+    <div
+      class="text"
+      style={{
+        color: "#eff3f4",
+      }}
+    >
+      &copy; {today.getFullYear()} fmarcos.dev
+    </div>
+  </div>
+</div>
+
+<style>
+  .order {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: 720px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .nav-links {
+    display: flex;
+  }
+  .icon {
+    align-self: center;
+    @media (min-width: 1360px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .text {
+    align-self: center;
+    @media (min-width: 720px) {
+      margin-right: 31px;
+    }
+  }
+
+  .headerPosition {
+    position: fixed;
+    /* @media (max-width: 720px) {
+      position: relative;
+    } */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #252830;
+    z-index: 1;
+  }
+</style>
