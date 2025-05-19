@@ -1,0 +1,31 @@
+---
+const { name, height, width } = Astro.props;
+---
+
+<div style={{ backgroundImage: `url(${name})`, height, width }}></div>
+
+<style>
+  div {
+    display: inline-block;
+    background-size: cover;
+  }
+</style>
+
+<script>
+  export default {
+    props: {
+      name: {
+        type: String,
+        default: "",
+      },
+      width: {
+        type: String,
+        default: "32px",
+      },
+      height: {
+        type: String,
+        default: "32px",
+      },
+    },
+  };
+</script>

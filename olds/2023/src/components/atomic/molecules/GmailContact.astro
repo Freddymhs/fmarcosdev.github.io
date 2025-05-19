@@ -1,0 +1,86 @@
+<div class="contact">
+  <input value="fmarcosdev@gmail.com" disabled />
+  <a href="mailto:fmarcosdev@gmail.com">
+    <svg width="21" height="21" viewBox="0 -0.5 25 25">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M18.455 9.8834L7.063 4.1434C6.76535 3.96928 6.40109 3.95274 6.08888 
+        4.09916C5.77667 4.24558 5.55647 4.53621 5.5 4.8764C5.5039 4.98942 5.53114 5.10041 5.58 
+        5.2024L7.749 10.4424C7.85786 10.7903 7.91711 11.1519 7.925 11.5164C7.91714 11.8809 7.85789 
+        12.2425 7.749 12.5904L5.58 17.8304C5.53114 17.9324 5.5039 18.0434 5.5 18.1564C5.55687 18.4961 
+        5.77703 18.7862 6.0889 18.9323C6.40078 19.0785 6.76456 19.062 7.062 18.8884L18.455 13.1484C19.0903 
+        12.8533 19.4967 12.2164 19.4967 11.5159C19.4967 10.8154 19.0903 10.1785 18.455 9.8834V9.8834Z"
+      ></path>
+    </svg>
+  </a>
+  <button class="ecopy">
+    <svg width="21" height="21" viewBox="0 -0.5 25 25">
+      <path
+        d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+      <path
+        d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+  .contact {
+    display: flex;
+    height: 30px;
+    font-size: 14px;
+  }
+  input,
+  a,
+  button {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    background-color: inherit;
+    text-align: center;
+    color: #252830;
+    text-decoration: none;
+  }
+  input,
+  a,
+  button {
+    text-decoration: none;
+    border: 1px dashed #252830;
+    border-radius: 0px;
+    background-color: inherit;
+    fill: none;
+    stroke-width: 1.8;
+    stroke: #252830;
+    display: flex;
+    &:hover {
+      background-color: #252830;
+      color: #eff3f4;
+      stroke: #eff3f4;
+    }
+  }
+  input {
+    &:hover {
+      background-color: initial;
+      color: initial;
+      stroke: initial;
+    }
+    mouse-over: none;
+  }
+</style>
+
+<script>
+  document.querySelector("button.ecopy")?.addEventListener("click", () => {
+    navigator.clipboard.writeText("fmarcosdev@gmail.com");
+  });
+</script>

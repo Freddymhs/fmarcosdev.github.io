@@ -1,0 +1,32 @@
+---
+import { uNFixeD, PROFESSION } from "../../../consts";
+---
+
+<div class="me">
+  <h1>{uNFixeD}</h1>
+  <h2>{PROFESSION}</h2>
+</div>
+
+<style>
+  .me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  h1 {
+    font-size: 34px;
+    color: #252830;
+    &:after {
+      content: "Huaylla";
+      color: #8cb348;
+      position: absolute;
+      transform: translateX(-100%);
+    }
+  }
+
+  h2 {
+    font-size: 21px;
+    color: #252830;
+  }
+</style>

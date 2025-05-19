@@ -1,0 +1,70 @@
+---
+import { WELCOME_MESSAGES } from "../consts.ts";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fmarcos.dev</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <div class="container">
+      <div class="loader"></div>
+      <div class="text">
+        {WELCOME_MESSAGES[Math.floor(Math.random() * WELCOME_MESSAGES.length)]}
+      </div>
+    </div>
+    <script>
+      setTimeout(() => {
+        window.location.href = "/about_me";
+      }, 3000);
+    </script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f1de63;
+        color: #252830;
+        font-family: "Courier New", Courier, monospace;
+        overflow: hidden;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+      .loader {
+        border: 16px solid #095957;
+        border-top: 16px solid #252830;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .text {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    </style>
+  </body>
+</html>

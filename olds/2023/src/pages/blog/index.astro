@@ -1,0 +1,44 @@
+---
+import BaseHead from "../../components/atomic/atoms/BaseHead.astro";
+import Header from "../../components/atomic/molecules/Header.astro";
+import Footer from "../../components/atomic/molecules/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/atomic/atoms/FormattedDate.astro";
+import PagesLayout from "../../layouts/PagesLayout.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (b, a) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<PagesLayout title="Blog">
+  <main class="container mx-auto">
+    <h1 class="text-4xl font-bold mb-8">Blog e ideas</h1>
+    <div class="grid gap-12 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3">
+      {
+        posts.map((post) => (
+          <article class="bg-white rounded-lg shadow-lg  transition-transform hover:scale-110 duration-400 ease-in-out hover:shadow-2xl">
+            <a href={`/blog/${post.slug}/`}>
+              <img
+                src={post.data.heroImage}
+                class="h-20  object-cover w-full p-1 rounded-lg"
+              />
+              <div class="p-3">
+                <h2 class="text-xl font-semibold mb-2 text-gray-800 text-center">
+                  {post.data.title}
+                </h2>
+                <p class="text-right text-sm text-gray-600 opacity-60">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </main>
+  <Footer />
+</PagesLayout>
+
+<style></style>
