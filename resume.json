@@ -362,5 +362,10 @@
         "Estrategias RTS"
       ]
     }
-  ]
+  ],
+  "updates": {
+    "goal": "https://claude.ai/chat/ec237394-f521-44a5-ad3e-d0b978feaab7",
+    "short-summary": "Desarrollador de soluciones multiplataforma con experiencia en Flutter y comunicación en tiempo real mediante WebSockets. He implementado pipelines CI/CD y trabajado con GraphQL, PostgreSQL y Supabase Auth, garantizando integraciones robustas, seguras y eficientes en proyectos modernos.",
+    "ia-in-code": "Exploro soluciones con v0, refino código y pruebas con Claude, y consulto temas de arquitectura con GPT. Utilizo ramas dedicadas para features de IA, integrando Husky para linting y testing automatizado. Empleo Postbot en Postman para pruebas, documentando con Swagger. Mantengo flujos CI/CD con Jest y Playwright/Cypress para garantizar código mantenible y escalable"
+  }
 }
