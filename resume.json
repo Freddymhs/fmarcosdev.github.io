@@ -49,39 +49,86 @@
   },
   "work": [
     {
-      "name": "JyL LTDA.",
+      "name": "JL LTDA.",
       "position": "Fullstack Developer",
       "type": "full-time",
       "url": "",
       "startDate": "2024-04",
       "endDate": "2024-12",
-      "summary": "Responsable del desarrollo de soluciones multiplataforma, implementando tecnologías avanzadas como Flutter, WebSockets y CI/CD, y utilizando GraphQL, PostgreSQL y Supabase Auth para garantizar integraciones robustas y seguras.",
+      "summary": "Responsable del desarrollo de aplicación multiplataforma con arquitectura de microservicios, implementando tecnologías avanzadas como Flutter, WebSockets, garantizando integraciones robustas, escalables y de alta disponibilidad.",
       "highlights": [
-        "Desarrollo de aplicaciones multiplataforma con Flutter, asegurando una experiencia de usuario consistente y de alto rendimiento.",
-        "Implementación de WebSockets para la visualización de información en tiempo real, soportando múltiples conexiones simultáneas.",
-        "Diseño y optimización de APIs GraphQL respaldadas por PostgreSQL.",
-        "Automatización de pipelines CI/CD con GitHub Actions, logrando alta cobertura en pruebas y despliegues ágiles."
+        "Desarrollo de aplicaciones multiplataforma con Flutter, asegurando experiencia de usuario consistente y rendimiento optimizado",
+        "Backend serverless robusto con arquitectura de microservicios en AWS (capa gratuita), enfocado en validación automática de compras",
+        "Implementación de WebSockets para comunicación bidireccional en tiempo real, soportando múltiples conexiones simultáneas en multiplataforma",
+        "Sistema de caché distribuido con Redis para optimización de consultas y connection pooling entre servicios",
+        "Desarrollo con TDD (Test-Driven Development) para funciones críticas del sistema de validación",
+        "Automatización de flujos: Lambda para registro de usuarios + Lambda especializado para notificaciones de bienvenida",
+        "Pipeline CI/CD completamente automatizado con GitHub Actions para deployment continuo",
+        "Implementación de patrones de resiliencia: Circuit Breaker",
+        "Comunicación asíncrona robusta mediante AWS SNS/SQS entre backend principal y microservicio de validación de compras"
       ],
       "technologies": [
         "Flutter",
+        "Dart",
+        "AWS Lambda",
+        "AWS SNS",
+        "AWS SQS",
         "GraphQL",
         "Supabase",
         "Express",
         "TypeScript",
-        "Apollo Server",
         "Nexus",
         "Prisma",
+        "Apollo Server",
+        "WebSockets",
+        "Redis",
+        "GitHub Actions",
+        "CI/CD",
+        "Microservices",
+        "Serverless Architecture",
+        "TDD",
+        "Circuit Breaker Pattern",
+        "Connection Pooling",
+        "AWS Free Tier",
         "PostgreSQL",
-        "WebSockets"
+        "Nexus"
       ],
       "atsKeywords": [
-        "microservices",
-        "websockets",
-        "ai integration",
-        "tdd",
-        "ci/cd",
-        "typescript",
-        "javascript"
+        "fullstack developer",
+        "backend developer",
+        "microservices architecture",
+        "serverless development",
+        "aws lambda",
+        "graphql api",
+        "postgresql database",
+        "typescript development",
+        "express framework",
+        "prisma orm",
+        "apollo server",
+        "redis caching",
+        "websockets real-time",
+        "ci/cd pipeline",
+        "test driven development",
+        "database optimization",
+        "api development",
+        "cloud architecture",
+        "distributed systems",
+        "scalable backend",
+        "high availability",
+        "automated testing",
+        "github actions",
+        "supabase integration",
+        "connection pooling",
+        "circuit breaker pattern",
+        "asynchronous programming",
+        "aws sns sqs",
+        "flutter mobile",
+        "cross-platform development",
+        "software engineering",
+        "devops practices",
+        "system integration",
+        "performance optimization",
+        "backend architecture"
       ]
     },
     {
@@ -91,14 +138,14 @@
       "url": "",
       "startDate": "2021-02",
       "endDate": "2024-03",
-      "summary": "Desarrollo web con React (v18) y Next.js (v13) usando TypeScript, implementando arquitecturas escalables con GraphQL (Apollo Client) y optimizando rendimiento mediante técnicas avanzadas de caching. Lideré la refactorización de código legacy y establecí prácticas de Git/GitHub para mejorar la colaboración del equipo.",
+      "summary": "Desarrollo web con React (v18) y Next.js (v13) usando TypeScript, implementando arquitecturas escalables con GraphQL (Apollo Client) y optimizando rendimiento mediante técnicas avanzadas de caching. refactorizacion de código legacy y establecí prácticas de Git/GitHub para mejorar la colaboración del equipo.",
       "highlights": [
         "Desarrollo de interfaces con React 18 + Next.js 13 (App Router)",
-        "Refactorización de class components a functional components con hooks",
-        "Implementación de Apollo Client con optimistic UI y normalización de cache GraphQL",
+        "Refactorización de class components a functional components",
+        "Gestión de estado global y datos: Uso de Apollo Client con Optimistic UI y normalización de caché GraphQL, complementado con Context API + useReducer.",
         "Creación de componentes reutilizables usando Ant Design y Klog Design System interno",
-        "Implementación de Conventional Commits con Husky hooks",
-        "Gestión de estado global con Context API + useReducer"
+        "Implementación de capa de seguridad para gestión de feature flags y protección de datos con encriptación de extremo a extremo.",
+        "Debugging y optimización de código backend, Aceleración de carga de consultas a la BD y procesos JS, identificando dependencias críticas con Chrome DevTools Profiler."
       ],
       "technologies": [
         "React",
@@ -153,23 +200,43 @@
   "projects": [
     {
       "name": "Lends",
-      "description": "Aplicación web progresiva (PWA) para gestión de préstamos con autenticación de Google y sincronización con firebase realtime.",
+      "description": "PWA para gestión de préstamos con autenticación de Google y sincronización en tiempo real con Firebase.",
       "url": "https://github.com/Freddymhs/my-lends",
       "startDate": "2024-02",
       "endDate": "Presente",
       "highlights": [
-        "Implementación de autenticación con Google Auth Provider mediante Firebase",
+        "Autenticación con Google Auth Provider mediante Firebase",
         "Sincronización en tiempo real con Firebase Realtime Database",
-        "Diseño responsive con Ant Design para una experiencia consistente en móvil y desktop",
-        "Configuración completa de PWA con Workbox para funcionamiento offline",
+        "Diseño responsive con Ant Design para móvil y desktop",
+        "Configuración de PWA con Workbox para uso offline",
         "Gestión de estado global con React Context API",
         "Enrutamiento dinámico con React Router v6"
       ],
       "metrics": {
         "performance": "90+/100 Lighthouse",
-        "offlineCapability": "Funcionalidad básica disponible sin conexión",
-        "authSpeed": "Autenticación en <2 segundos"
+        "offlineCapability": "Funcionalidad básica sin conexión",
+        "authSpeed": "< 2 segundos"
       }
+    },
+    {
+      "name": "Geotrans Landing Page",
+      "description": "Landing page responsiva para empresa de transporte Geotrans, con secciones de servicios, testimonios y formulario de contacto integrado.",
+      "url": "https://github.com/Freddymhs/Hosting-GeotransWeb"
+    },
+    {
+      "name": "Mappy",
+      "description": "Aplicación web que extrae eventos públicos de Instagram mediante scraping y los visualiza en un mapa 3D interactivo en tiempo real usando Three.js y React.",
+      "url": "https://github.com/Freddymhs/mapy-front"
+    },
+    {
+      "name": "Agendo",
+      "description": "nestjs , Sistema de gestión de citas en tiempo real para clínica de rehabilitación, con autenticación, notificaciones y accesibilidad para personas con movilidad reducida.",
+      "url": "https://github.com/Freddymhs/agendo"
+    },
+    {
+      "name": "Geographical Info",
+      "description": "Servicio que convierte nombres de lugares en coordenadas (latitud y longitud) usando la API de OpenCage, generando un JSON estructurado para integraciones geoespaciales.",
+      "url": "https://github.com/Freddymhs/filling-geographical-info"
     }
   ],
   "skills": [
@@ -365,7 +432,9 @@
   ],
   "updates": {
     "goal": "https://claude.ai/chat/ec237394-f521-44a5-ad3e-d0b978feaab7",
-    "short-summary": "Desarrollador de soluciones multiplataforma con experiencia en Flutter y comunicación en tiempo real mediante WebSockets. He implementado pipelines CI/CD y trabajado con GraphQL, PostgreSQL y Supabase Auth, garantizando integraciones robustas, seguras y eficientes en proyectos modernos.",
-    "ia-in-code": "Exploro soluciones con v0, refino código y pruebas con Claude, y consulto temas de arquitectura con GPT. Utilizo ramas dedicadas para features de IA, integrando Husky para linting y testing automatizado. Empleo Postbot en Postman para pruebas, documentando con Swagger. Mantengo flujos CI/CD con Jest y Playwright/Cypress para garantizar código mantenible y escalable"
+    "short-summary": "Desarrollador multiplataforma con 4 años de experiencia, adaptable a entornos modernos que utilicen Flutter, React Native, Node.js, Next.js, GraphQL y ReactJS. Mi carrera se basa en el stack Fullstack JavaScript, fácilmente adaptable a proyectos móviles. He implementado soluciones con comunicación en tiempo real mediante WebSockets, integraciones seguras con Supabase Auth y bases de datos PostgreSQL, así como pipelines CI/CD para despliegues eficientes.",
+    "ia-in-code": "Exploro soluciones con v0, refino código y pruebas con Claude, y consulto temas de arquitectura con GPT. Utilizo ramas dedicadas para features de IA, integrando Husky para linting y testing automatizado. Empleo Postbot en Postman para pruebas, documentando con Swagger. Mantengo flujos CI/CD con Jest y Playwright/Cypress para garantizar código mantenible y escalable",
+    "backend-node": "Soy capaz y tengo experiencia en desarrollar APIs REST con Node.js usando TypeScript y Express. Implementé WebSockets con Socket.IO para sincronización en tiempo real, aplicando arquitectura en capas, patrón Repository, validaciones con Zod, manejo centralizado de errores, testing con Jest y documentación automática con Swagger. Me enfoco en buenas prácticas, escalabilidad y mantenibilidad.",
+    "nestjs": ""
   }
 }

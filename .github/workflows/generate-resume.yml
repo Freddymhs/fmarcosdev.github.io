@@ -30,7 +30,7 @@ jobs:
       - name: 🛠️ Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: "latest"
+          node-version: "22.12.0"
 
       - name: 📦 Cache Node Modules
         uses: actions/cache@v3
