@@ -5,6 +5,8 @@ import { WELCOME_MESSAGES } from "../../../constants/constants";
 import ProgressBar from "../../atoms/progressbar";
 import MessageArea from "../../atoms/messageArea";
 import { useNavigate } from "react-router";
+import resumeData from "../../../../resume.json";
+import { preload } from "react-dom";
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -34,12 +36,21 @@ export default function Landing() {
           clearInterval(progressInterval);
           return 100;
         }
-        return currentProgress + 1.8;
+        return currentProgress + 2.1;
       });
     }, 70);
 
     return () => clearInterval(progressInterval);
   }, [getRandomMessage]);
+
+  useEffect(() => {
+    const { certificates } = resumeData;
+
+    certificates.forEach((cert) => {
+      console.log(cert.name);
+      preload("/public/certificates/" + cert.name + ".png", { as: "image" });
+    });
+  }, []);
 
   return (
     <>
