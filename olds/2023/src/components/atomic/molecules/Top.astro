@@ -1,0 +1,27 @@
+---
+import Cv from "../molecules/Cv.astro";
+import GmailContact from "../molecules/GmailContact.astro";
+import LinkedinContact from "./LinkedinContact.astro";
+---
+
+<div>
+  <div class="separed">
+    <Cv />
+    <GmailContact />
+  </div>
+  <div class="toRight">
+    <LinkedinContact />
+  </div>
+
+  <style>
+    .separed {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .toRight {
+      display: flex;
+      justify-content: flex-end;
+    }
+  </style>
+</div>

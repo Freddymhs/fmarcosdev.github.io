@@ -1,0 +1,25 @@
+---
+import PagesLayout from "../layouts/PagesLayout.astro";
+
+const allImages = import.meta.glob("/public/certificates/*");
+
+// Convertir los nombres de las rutas a un arreglo
+const certificateKeys = Object.keys(allImages);
+const certificatePathsDynamic = certificateKeys.map((path) =>
+  path.replace("/public", "")
+);
+---
+
+<PagesLayout title="Certificados">
+  <div class="container mx-auto grid grid-cols-3 gap-4 max-w-7xl">
+    {
+      certificatePathsDynamic.map((path) => (
+        <img
+          src={path}
+          alt={path}
+          class="max-w-full mb-2 shadow-lg  transition-transform hover:scale-110 duration-400 ease-in-out hover:shadow-2xl"
+        />
+      ))
+    }
+  </div>
+</PagesLayout>
