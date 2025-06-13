@@ -8,6 +8,16 @@ import { useNavigate } from "react-router";
 import resumeData from "../../../../resume.json";
 import { preload } from "react-dom";
 
+(() => {
+  const { certificates } = resumeData;
+
+  certificates.forEach((cert) => {
+    preload("/certificates/" + cert.name + ".png", {
+      as: "image",
+    });
+  });
+})();
+
 export default function Landing() {
   const navigate = useNavigate();
 
@@ -42,23 +52,6 @@ export default function Landing() {
 
     return () => clearInterval(progressInterval);
   }, [getRandomMessage]);
-
-  (() => {
-    const { certificates } = resumeData;
-
-    certificates.forEach((cert) => {
-      preload("/certificates/" + cert.name + ".png", {
-        as: "image",
-        imageSrcSet:
-          "/certificates/" +
-          cert.name +
-          ".png 512w, /certificates/" +
-          cert.name +
-          ".png 1024w",
-        imageSizes: "(max-width: 512px) 512px, 1024px",
-      });
-    });
-  })();
 
   return (
     <>

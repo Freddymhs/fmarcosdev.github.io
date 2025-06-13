@@ -127,7 +127,7 @@ function TimelineItem({
                 className={`flex items-start text-sm transition-all duration-300 ${
                   showItem
                     ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-2"
+                    : "opacity-100 -translate-x-2"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >

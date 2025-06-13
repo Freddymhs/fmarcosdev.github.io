@@ -48,7 +48,7 @@ const Certificates = () => {
           {visible.map((cert) => (
             <div key={cert.name} className="w-full px-2">
               <div className="bg-cv-light rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform ">
-                <div className="relative">
+                <div className="w-full h-72">
                   <Award size={21} className="ml-1" />
 
                   <img
