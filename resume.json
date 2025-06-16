@@ -55,15 +55,20 @@
       "url": "",
       "startDate": "2024-04",
       "endDate": "2024-12",
-      "summary": "Responsable del desarrollo de aplicación multiplataforma con arquitectura de microservicios, implementando tecnologías avanzadas como Flutter, WebSockets, garantizando integraciones robustas, escalables y de alta disponibilidad.",
+      "summary": "Fullstack Developer con experiencia en desarrollo de aplicaciones multiplataforma usando Flutter y arquitecturas backend escalables. Especializado en APIs GraphQL con PostgreSQL, comunicación en tiempo real via WebSockets, y automatización CI/CD con deployment cloud. Enfocado en entregar soluciones robustas, seguras y de alto rendimiento.",
+      "v2": "Responsable del desarrollo de aplicación multiplataforma con arquitectura de microservicios, implementando tecnologías avanzadas como Flutter, WebSockets, garantizando integraciones robustas, escalables y de alta disponibilidad.",
       "highlights": [
-        "Desarrollo de aplicaciones multiplataforma con Flutter, asegurando experiencia de usuario consistente y rendimiento optimizado",
-        "Backend serverless robusto con arquitectura de microservicios en AWS (capa gratuita), enfocado en validación automática de compras",
-        "Implementación de WebSockets para comunicación bidireccional en tiempo real, soportando múltiples conexiones simultáneas en multiplataforma",
-        "Sistema de caché distribuido con Redis para optimización de consultas y connection pooling entre servicios",
+        "Desarrollo de aplicaciones multiplataforma con Flutter, asegurando experiencia de usuario consistente y rendimiento optimizado mediante integración con APIs GraphQL",
+        "Diseño y optimización de APIs GraphQL respaldadas por PostgreSQL para manejo eficiente de datos",
+        "Integración de Supabase para autenticación segura y gestión de usuarios",
+        "Implementación de WebSockets para comunicación bidireccional en tiempo real, soportando múltiples conexiones simultáneas y visualización de información en vivo",
+        "Automatización de pipelines CI/CD con GitHub Actions para deployment continuo y despliegues ágiles"
+      ],
+      "v2hig": [
         "Desarrollo con TDD (Test-Driven Development) para funciones críticas del sistema de validación",
+        "Backend serverless robusto con arquitectura de microservicios en AWS (capa gratuita), enfocado en validación automática de compras",
+        "Sistema de caché distribuido con Redis para optimización de consultas y connection pooling entre servicios",
         "Automatización de flujos: Lambda para registro de usuarios + Lambda especializado para notificaciones de bienvenida",
-        "Pipeline CI/CD completamente automatizado con GitHub Actions para deployment continuo",
         "Implementación de patrones de resiliencia: Circuit Breaker",
         "Comunicación asíncrona robusta mediante AWS SNS/SQS entre backend principal y microservicio de validación de compras"
       ],
@@ -435,6 +440,7 @@
     "short-summary": "Desarrollador multiplataforma con 4 años de experiencia, adaptable a entornos modernos que utilicen Flutter, React Native, Node.js, Next.js, GraphQL y ReactJS. Mi carrera se basa en el stack Fullstack JavaScript, fácilmente adaptable a proyectos móviles. He implementado soluciones con comunicación en tiempo real mediante WebSockets, integraciones seguras con Supabase Auth y bases de datos PostgreSQL, así como pipelines CI/CD para despliegues eficientes.",
     "ia-in-code": "Exploro soluciones con v0, refino código y pruebas con Claude, y consulto temas de arquitectura con GPT. Utilizo ramas dedicadas para features de IA, integrando Husky para linting y testing automatizado. Empleo Postbot en Postman para pruebas, documentando con Swagger. Mantengo flujos CI/CD con Jest y Playwright/Cypress para garantizar código mantenible y escalable",
     "backend-node": "Soy capaz y tengo experiencia en desarrollar APIs REST con Node.js usando TypeScript y Express. Implementé WebSockets con Socket.IO para sincronización en tiempo real, aplicando arquitectura en capas, patrón Repository, validaciones con Zod, manejo centralizado de errores, testing con Jest y documentación automática con Swagger. Me enfoco en buenas prácticas, escalabilidad y mantenibilidad.",
-    "nestjs": ""
+    "nestjs": "arquitectura modular basada en módulos, controladores, proveedores y servicios, el uso intensivo de decoradores, y los principios de Inversión de Control (IoC) e Inyección de Dependencias (DI) que estructuran el manejo de rutas y la organización de tu código.",
+    "aws": "AWS (EC2, Lambdas, DynamoDB)"
   }
 }
