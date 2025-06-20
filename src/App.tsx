@@ -9,6 +9,7 @@ import {
   BLOG_PAGE,
   CERTIFICATES_PAGE,
   HOME_PAGE,
+  PROJECTS_PAGE,
   SOCIAL_PAGE,
 } from "./constants/constants";
 import {
@@ -17,6 +18,7 @@ import {
   Certificates,
   LandingPage,
   Social,
+  Projects,
 } from "./components/pages";
 
 const App = () => {
@@ -61,6 +63,15 @@ const App = () => {
           </BlogLayout>
         }
       />
+
+      <Route
+        path={PROJECTS_PAGE}
+        element={
+          <MainLayout>
+            <Projects />
+          </MainLayout>
+        }
+      ></Route>
       <Route path="*" element={<Navigate to={HOME_PAGE} replace />} />
     </Routes>
   );
