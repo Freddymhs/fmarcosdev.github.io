@@ -13,7 +13,7 @@ const IconButton = ({ icon, title, type = "default" }: IconButtonProps) => {
       : "bg-secondary-color text-read-white-color";
 
   return (
-    <span className={`${baseStyles} ${typeStyles}`}>
+    <span className={`${baseStyles} ${typeStyles} w-full`}>
       <span className="text-inherit">{icon}</span>
       <p>{title}</p>
     </span>
