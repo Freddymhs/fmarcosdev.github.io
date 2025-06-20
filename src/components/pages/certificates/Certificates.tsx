@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import resumeData from "../../../../resume.json";
 import useMediaQuery from "../../../hooks/useMediaQuery";
+import PageContentLayout from "../../templates/page-content-layout/Page-Content-Layout";
 
 const Certificates = () => {
   const { certificates } = resumeData;
@@ -24,15 +25,11 @@ const Certificates = () => {
     : certificates.slice(currentIndex, currentIndex + 1);
 
   const navBtn =
-    "p-2 rounded-full bg-cv-light text-cv-dark shadow-md hover:scale-110 transition bg-important-color cursor-pointer";
+    "p-2 rounded-full bg-cv-light  shadow-md hover:scale-110 transition bg-important-color cursor-pointer";
 
-  return (
-    <section className="w-full py-16 bg-cv-yellow">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-cv-dark font-mono mb-12">
-          Certificaciones
-        </h2>
-
+  const Content = () => {
+    return (
+      <>
         {isDesktop && (
           <div className="flex justify-between items-center mb-4">
             <button onClick={handlePrevious} className={navBtn}>
@@ -58,7 +55,7 @@ const Certificates = () => {
                   />
                 </div>
                 <div className="px-2 py-1">
-                  <h3 className="font-semibold text-lg text-cv-dark font-mono truncate">
+                  <h3 className="font-semibold text-lg font-mono truncate">
                     {cert.name.replace(/-/g, " ")}
                   </h3>
                   <p className="text-sm text-cv-secondary">
@@ -96,8 +93,14 @@ const Certificates = () => {
             </button>
           </div>
         )}
-      </div>
-    </section>
+      </>
+    );
+  };
+
+  return (
+    <PageContentLayout
+      content={{ title: "Certificados", content: <Content /> }}
+    />
   );
 };
 
