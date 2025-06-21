@@ -4,33 +4,42 @@ import IconButton from "./IconButton";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
 interface InterfaceCardProps {
-  isFullWidth?: boolean;
+  isRequiredFullWidth?: boolean;
   isCardVertical?: boolean;
   i?: number;
 }
 
-const Card = ({ isFullWidth, isCardVertical, i }: InterfaceCardProps) => {
+const Card = ({
+  isRequiredFullWidth,
+  isCardVertical,
+  i,
+}: InterfaceCardProps) => {
+  const firstElements = i === 0;
   return (
     <div
       key={i}
-      className={isFullWidth ? "w-full" : "w-full md:w-[calc(50%-0.5rem)]"}
+      className={`${
+        isRequiredFullWidth ? "w-full" : "w-full md:w-[calc(50%-0.5rem)]"
+      } `}
     >
       <div
-        className={`bg-red-300 shadow rounded border border-dashed bg-white-area-color
+        className={`bg-red-300 shadow rounded bg-white-area-color border border-dashed
         flex ${isCardVertical ? "flex-col" : "flex-row"}`}
       >
         {/*  */}
-        <div className="border  flex-1 bg-read-color">
+        <div className="  flex-1 bg-read-color">
           <div className="relative aspect-[3/2] min-h-full max-w-full bg-gray-100 flex items-center justify-center rounded-sm mx-auto  ">
-            <p className="absolute top-2 left-2 bg-primary-color text-xs font-semibold px-3 py-1 my-2 ml-1 rounded-full">
-              Proyecto Destacado
-            </p>
+            {firstElements && (
+              <p className="absolute top-2 left-2 bg-primary-color text-xs font-semibold px-3 py-1 my-2 ml-1 rounded-full">
+                Proyecto Destacado
+              </p>
+            )}
             img aca
           </div>
         </div>
         {/*  */}
-        <div className="border  flex-1 w-full flex justify-center items-center ">
-          <div className="w-full h-full p-10 border border-dashed  flex flex-col justify-center">
+        <div className="  flex-1 w-full flex justify-center items-center ">
+          <div className="w-full h-full p-10   flex flex-col justify-center">
             <div className="flex items-center mt-4 gap-3 mb-4  ">
               <p className="bg-read-white-color border border-2 rounded-full px-3 py-1 truncate">
                 Tipo Project - Web Comporation
@@ -66,6 +75,7 @@ const Card = ({ isFullWidth, isCardVertical, i }: InterfaceCardProps) => {
             </div>
           </div>
         </div>
+        {/*  */}
       </div>
     </div>
   );

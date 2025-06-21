@@ -1,8 +1,6 @@
-// import useMediaQuery from "../../../hooks/useMediaQuery";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 import PageContentLayout from "../../templates/page-content-layout/Page-Content-Layout";
 import Card from "./Card";
-// import Card from "./Card";
 
 const Projects = () => {
   const Content = () => {
@@ -14,13 +12,12 @@ const Projects = () => {
         {Array(4)
           .fill(null)
           .map((_, i) => {
-            const isFullWidth = !!isMobile || i === 0;
-            const isCardVertical = isMobile || i !== 0;
-
+            const isRequiredFullWidth = !!isMobile || i === 0;
+            const isCardVertical = isMobile === true || i !== 0;
             return (
               <Card
-                isFullWidth={isFullWidth}
                 isCardVertical={isCardVertical}
+                isRequiredFullWidth={isRequiredFullWidth}
                 i={i}
               />
             );
