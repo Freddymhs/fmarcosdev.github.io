@@ -1,25 +1,30 @@
 // import useMediaQuery from "../../../hooks/useMediaQuery";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 import PageContentLayout from "../../templates/page-content-layout/Page-Content-Layout";
 import Card from "./Card";
 // import Card from "./Card";
 
 const Projects = () => {
   const Content = () => {
-    // const { isDesktop } = useMediaQuery();
+    const { isDesktop } = useMediaQuery();
+    const isMobile = !isDesktop;
+
     return (
-      <div className="flex flex-wrap gap-4 w-full max-w-screen-xl mx-auto ">
+      <div className="flex flex-col md:flex-row md:flex-wrap gap-4 max-w-screen-xl mx-auto">
         {Array(4)
           .fill(null)
-          .map((_, i) => (
-            <div
-              key={i}
-              className={` ${
-                i === 0 ? "w-full" : "w-full md:w-[calc(50%-0.5rem)]"
-              }`}
-            >
-              <Card />
-            </div>
-          ))}
+          .map((_, i) => {
+            const isFullWidth = !!isMobile || i === 0;
+            const isCardVertical = isMobile || i !== 0;
+
+            return (
+              <Card
+                isFullWidth={isFullWidth}
+                isCardVertical={isCardVertical}
+                i={i}
+              />
+            );
+          })}
       </div>
     );
   };
