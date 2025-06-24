@@ -333,9 +333,10 @@ export const ExistentPages = [
   { to: SOCIAL_PAGE, label: SOCIAL_PAGE },
   { to: CERTIFICATES_PAGE, label: CERTIFICATES_PAGE },
   { to: BLOG_PAGE, label: BLOG_PAGE },
+  { to: PROJECTS_PAGE, label: PROJECTS_PAGE },
 ];
 export const PAGES = ExistentPages.filter(({ to }) =>
-  [HOME_PAGE, CERTIFICATES_PAGE].includes(to)
+  [HOME_PAGE, CERTIFICATES_PAGE, PROJECTS_PAGE].includes(to)
 );
 
 export const copyRightText = "© 2025 fmarcos.dev";
