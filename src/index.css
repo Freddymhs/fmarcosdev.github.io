@@ -17,6 +17,7 @@
   --color-important-color: #8cb348;
   --color-read-color: #095957;
   --color-read-white-color: #fff5e1;
+  --color-white-area-color: #e5e7eb;
 }
 
 header {
@@ -26,4 +27,20 @@ header {
 
 html {
   background-color: var(--color-primary-color);
+}
+
+/* personalized scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: var(--color-important-color);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: var(--color-white-area-color);
+  border-radius: 10px;
+  border: 2px solid var(--color-read-color);
 }

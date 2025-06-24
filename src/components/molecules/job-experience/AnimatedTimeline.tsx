@@ -3,8 +3,8 @@ import resumeData from "../../../../resume.json";
 import {
   awardsText,
   professionalExperienceText,
-  techColors,
 } from "../../../constants/constants";
+import ShowPills from "./TechPills";
 
 interface ItemProps {
   name: string;
@@ -16,8 +16,6 @@ interface ItemProps {
   technologies?: string[];
 }
 // todo , this sohuld be in a helper
-const getTechColor = (tech: string) =>
-  techColors[tech] || "bg-gray-100 text-gray-800";
 
 const formatDate = (date: string) => {
   if (!date) return "No disponible";
@@ -139,22 +137,7 @@ function TimelineItem({
           </ul>
         </div>
       )}
-
-      {technologies.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <span
-              key={index}
-              className={`text-xs px-2 py-0.5 rounded-full transition-all duration-300 ${getTechColor(
-                tech
-              )} ${showItem ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      )}
+      <ShowPills items={technologies} max={17} format="pill" />
     </div>
   );
   return (

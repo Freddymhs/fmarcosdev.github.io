@@ -12,6 +12,8 @@
     "cypress": "cypress open"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.14.3",
+    "@cloudinary/url-gen": "^1.21.0",
     "@tailwindcss/vite": "^4.0.17",
     "lucide-react": "^0.507.0",
     "react": "^19.0.0",
