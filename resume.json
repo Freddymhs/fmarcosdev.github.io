@@ -238,6 +238,48 @@
       ],
       "role": "Full-stack Developer",
       "complexity": "Simple"
+    },
+    {
+      "type": "Mobile App",
+      "name": "Lends",
+      "startDate": "2024-02",
+      "endDate": "2024-04",
+      "description": "...",
+      "technologies": ["react-native"],
+      "url": "",
+      "githubUrl": "",
+      "image": "",
+      "features": [],
+      "role": "Developer",
+      "complexity": "Simple"
+    },
+    {
+      "type": "Mobile App",
+      "name": "Bot Router",
+      "startDate": "2024-07",
+      "endDate": "2024-08",
+      "description": "...",
+      "technologies": ["react-native"],
+      "url": "",
+      "githubUrl": "",
+      "image": "",
+      "features": [],
+      "role": "Developer",
+      "complexity": "Simple"
+    },
+    {
+      "type": "Mobile App",
+      "name": "Gestor APP",
+      "startDate": "2024-02",
+      "endDate": "2025-01",
+      "description": "...",
+      "technologies": ["Flutter", "NodeJS", "NestJS"],
+      "url": "",
+      "githubUrl": "",
+      "image": "",
+      "features": [],
+      "role": "Developer",
+      "complexity": "Complejo"
     }
   ],
   "skills": [
