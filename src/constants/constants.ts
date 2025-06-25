@@ -328,15 +328,17 @@ export const contactsData = [
   // { name: "mi-blog.dev", url: "https://mi-blog.dev", type: "web" },
 ];
 
-export const ExistentPages = [
+const ExistentPages = [
   { to: HOME_PAGE, label: HOME_PAGE },
   { to: SOCIAL_PAGE, label: SOCIAL_PAGE },
   { to: CERTIFICATES_PAGE, label: CERTIFICATES_PAGE },
-  { to: BLOG_PAGE, label: BLOG_PAGE },
   { to: PROJECTS_PAGE, label: PROJECTS_PAGE },
+  { to: BLOG_PAGE, label: BLOG_PAGE },
 ];
+const ENABLED_PAGES = [HOME_PAGE, CERTIFICATES_PAGE, PROJECTS_PAGE, BLOG_PAGE];
+
 export const PAGES = ExistentPages.filter(({ to }) =>
-  [HOME_PAGE, CERTIFICATES_PAGE, PROJECTS_PAGE].includes(to)
+  ENABLED_PAGES.includes(to)
 );
 
 export const copyRightText = "© 2025 fmarcos.dev";
