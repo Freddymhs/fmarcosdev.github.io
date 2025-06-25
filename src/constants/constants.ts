@@ -3,6 +3,7 @@
 
 export const URL_SITE = "https://fmarcos.dev";
 // export const URL_SITE = "http://localhost:4321/";
+export const INITIAL_ROUTE = "/";
 export const SITE_TITLE = "fmarcos";
 export const SITE_DESCRIPTION = "website";
 export const HOME_PAGE = "/about_me";
@@ -10,6 +11,7 @@ export const SOCIAL_PAGE = "/social";
 export const BLOG_PAGE = "/blog";
 export const PROJECTS_PAGE = "/projects";
 export const CERTIFICATES_PAGE = "/certificates";
+export const NO_INCLUDED_ROUTE_TO_PAGE = "*";
 export const uNFixeD = "Freddy Huaylla";
 export const PROFESSION = "ANALISTA PROGRAMADOR";
 export const WELCOME_MESSAGES = [
@@ -328,17 +330,49 @@ export const contactsData = [
   // { name: "mi-blog.dev", url: "https://mi-blog.dev", type: "web" },
 ];
 
-const ExistentPages = [
-  { to: HOME_PAGE, label: HOME_PAGE },
-  { to: SOCIAL_PAGE, label: SOCIAL_PAGE },
-  { to: CERTIFICATES_PAGE, label: CERTIFICATES_PAGE },
-  { to: PROJECTS_PAGE, label: PROJECTS_PAGE },
-  { to: BLOG_PAGE, label: BLOG_PAGE },
-];
-const ENABLED_PAGES = [HOME_PAGE, CERTIFICATES_PAGE, PROJECTS_PAGE, BLOG_PAGE];
+export const ROUTES = {
+  INITIAL_ROUTE: INITIAL_ROUTE,
+  HOME_PAGE: HOME_PAGE,
+  SOCIAL_PAGE: "/social",
+  CERTIFICATES_PAGE: CERTIFICATES_PAGE,
+  PROJECTS_PAGE: PROJECTS_PAGE,
+  BLOG_PAGE: BLOG_PAGE,
+  NO_INCLUDED_ROUTE_TO_PAGE: NO_INCLUDED_ROUTE_TO_PAGE,
+} as const;
 
-export const PAGES = ExistentPages.filter(({ to }) =>
-  ENABLED_PAGES.includes(to)
+export type RoutePath = (typeof ROUTES)[keyof typeof ROUTES];
+
+const ExistentPages: { to: RoutePath; label: string }[] = [
+  { to: ROUTES.HOME_PAGE, label: "About Me" },
+  { to: ROUTES.SOCIAL_PAGE, label: "Social" },
+  { to: ROUTES.CERTIFICATES_PAGE, label: "Certificates" },
+  { to: ROUTES.PROJECTS_PAGE, label: "Projects" },
+  { to: ROUTES.BLOG_PAGE, label: "Blog" },
+  { to: ROUTES.NO_INCLUDED_ROUTE_TO_PAGE, label: "NOT FOUND PAGE" },
+  { to: ROUTES.INITIAL_ROUTE, label: "Landing Page" },
+];
+
+const ACTIVE_ROUTES: RoutePath[] = [
+  ROUTES.HOME_PAGE,
+  ROUTES.CERTIFICATES_PAGE,
+  ROUTES.PROJECTS_PAGE,
+  ROUTES.BLOG_PAGE,
+  ROUTES.NO_INCLUDED_ROUTE_TO_PAGE,
+  ROUTES.INITIAL_ROUTE,
+];
+const VISIBLE_NAV_ROUTES: RoutePath[] = [
+  ROUTES.HOME_PAGE,
+  ROUTES.CERTIFICATES_PAGE,
+  ROUTES.PROJECTS_PAGE,
+  ROUTES.BLOG_PAGE,
+];
+
+export const REGISTERED_PAGES = ExistentPages.filter(({ to }) =>
+  ACTIVE_ROUTES.includes(to)
+);
+
+export const NAVIGATION_PAGES = ExistentPages.filter(({ to }) =>
+  VISIBLE_NAV_ROUTES.includes(to)
 );
 
 export const copyRightText = "© 2025 fmarcos.dev";

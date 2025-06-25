@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { tv } from "tailwind-variants";
-import { PAGES } from "../../../constants/constants";
 import { Link } from "react-router";
+import { NAVIGATION_PAGES } from "../../../constants/constants";
 
 interface SidebarProps {
   open: boolean;
@@ -11,7 +11,7 @@ export const SideBar: FC<SidebarProps> = ({ open }) => {
   return (
     <div className={sidebarContainerStyle({ open })}>
       <ul>
-        {PAGES.map(({ to, label }) => {
+        {NAVIGATION_PAGES.map(({ to, label }) => {
           const isActive = location.pathname === to;
           return (
             <li key={to}>

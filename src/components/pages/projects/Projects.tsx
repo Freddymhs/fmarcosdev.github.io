@@ -10,6 +10,7 @@ const Projects = () => {
 
   return (
     <PageContentLayout
+      strech={true}
       content={{
         title: "Proyectos",
         subtitle:
