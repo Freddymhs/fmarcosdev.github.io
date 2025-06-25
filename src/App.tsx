@@ -20,6 +20,7 @@ import {
   Social,
   Projects,
 } from "./components/pages";
+import CMSBlog from "./components/pages/blog/Blog";
 
 const App = () => {
   const versionApp = useMemo(() => `V.${packageJson.version}`, []);
@@ -69,6 +70,14 @@ const App = () => {
         element={
           <MainLayout>
             <Projects />
+          </MainLayout>
+        }
+      />
+      <Route
+        path={BLOG_PAGE}
+        element={
+          <MainLayout>
+            <CMSBlog />
           </MainLayout>
         }
       />
