@@ -32,7 +32,7 @@ export const SideBar: FC<SidebarProps> = ({ open }) => {
 };
 
 const sidebarContainerStyle = tv({
-  base: `w-[70%] h-screen fixed top-0 left-0 z-1 bg-secondary-color   text-read-white-color 
+  base: `w-[70%] h-screen fixed top-0 left-0 z-1 bg-secondary-color   text-read-white-color z-10000
   transform transition-transform duration-200`,
   variants: {
     open: {
