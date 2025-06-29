@@ -427,3 +427,19 @@ export const professionalExperienceText = "Experiencia Profesional";
 export const certificationsText = "Certificaciones";
 
 export const awardsText = "Logros destacados";
+
+interface CardData {
+  id: number;
+  title: string;
+  subtitle: string;
+  color: string;
+  textColor: string;
+  icon: string;
+}
+export const generateCards = (): CardData[] =>
+  Array.from({ length: 13 }, (_, i) => ({
+    id: i + 1,
+    title: `Concepto ${i + 1}`,
+  }));
+
+export const cards: CardData[] = generateCards();
