@@ -5,9 +5,7 @@ import { useLocation } from "react-router";
 
 import useMediaQuery from "../../../hooks/useMediaQuery";
 import { BLOG_PAGE } from "../../../constants/constants";
-import { SideBar } from "../../organisms/header/Sidebar";
-import { Footer } from "../../organisms/footer/footer";
-import Header from "./Header";
+import Footer from "../../organisms/footer/footer";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -30,10 +28,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <div className={layoutContainerStyle({ showTcontactInfo })}>
-      <SideBar open={open} />
+      {/* <SideBar open={open} />
       <Header />
-      <main className=" flex flex-col flex-1">{children}</main>
-      <Footer debug={false} footerHeight={17} />
+      <main className=" flex flex-col flex-1">{children}</main> */}
+      <Footer debug={true} footerHeight={17} />
     </div>
   );
 };
